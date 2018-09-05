@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+	a{
+		color: white;
+	}
+	a:hover{
+		color: white;
+		text-decoration:underline;
+	}
+	.chat{
+                 background-color:white;
+                 position: fixed;            /* フッターの固定 */
+                 bottom: 10px;                /* 位置(下0px) */
+                 right: 20px;                  /* 位置(左0px) */
+                 width: 280px;                /* 横幅100%　*/
+                 height: 500px;
+                 z-index: 3;
+                 border-radius: 10px;
+                 border-color: black;
+                 border-style: solid;
+                 border-width: 1px;
+                 display: none;
+            }
+    .chat-header{
+                 background-color:white;
+                 height: 7%;
+                 border-radius: 10px 10px 0px 0px;
+                 font-size: 18px;
+            }
+    .chat-header-icon{
+                 text-align: right;
+                 padding-right: 10px;
+                 padding-top: 3px;
+                 height: 15px;
+            }
+    .chat-body{
+                 height: 81%;
+            }
+    .chat-footer{
+
+                 height: 12%;
+                 border-radius: 0px 0px 17px 17px;
+                 border-top:medium solid gray;
+                 border-width: 1px;
+            }
+    .chat-footer-contet{
+
+                 padding: 10px ;
+            }
+    .chat-header-title{
+                 font-size: 25px;
+                 text-align: center;
+                 padding-top: 0px;
+                 font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+
+            }
+    .chat-header-bottom{
+                 font-size: 10px;
+                 text-align: right;
+                 padding-bottom: 5px;
+                 padding-right: 8px;
+            }
+     .message-form{
+                 border:none;
+                 resize:none;
+                 font-size: 14px;
+                 display: inline-block;
+
+            }
+    .buttom{
+    	padding: 0px;
+    	background-color: white;
+    	border-color: white;
+
+    }
+
+    .buttom-header
+    {
+    	border:none;
+    	background-color: white;
+    	border-color: white;
+
+    }
+
+
+
+    #bms_messages {
+    overflow: auto;/* スクロールを効かせつつ、メッセージがタイムラインの外に出ないようにする */
+    height:100%;/*テキストエリアが下に張り付く様にする*/
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    background-color: white;
+   /* box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2) inset;/*ヘッダーの下に影を入れる*/
+}
+    /* メッセージ全般のスタイル */
+    .bms_message {
+        margin: 0px;
+        padding: 0 14px;/*吹き出しがタイムラインの側面にひっつかない様に隙間を開ける*/
+        font-size: 12px;
+        word-wrap: break-word;/* 吹き出し内で自動で改行 */
+        white-space: normal;/*指定widthに合わせて、文字を自動的に改行*/
+    }
+    	 .bms_message_box{
+            margin-top: 3px;/*上下の吹き出しがひっつかない様に隙間を入れる*/
+            max-width: 100%;/*文字が長くなった時に吹き出しがタイムラインからはみ出さない様にする*/
+            font-size: 10px;
+            margin-bottom: 7px;
+        }
+            /*
+            *追加
+            */
+            .bms_message_content{
+                padding: 10px;/*文字や画像（コンテンツ）の外側に隙間を入れる*/
+            }
+
+    /* メッセージ１（左側） */
+    .bms_left {
+        float: left;/*吹き出しをbms_messagesに対して左寄せ*/
+        line-height: 1.3em;
+    }
+    	.bms_left .bms_message_box {
+                color: #fff;/*テキストを白にする*/
+                background: #aa008c;
+                border: 2px solid #aa008c;
+                border-radius: 15px 15px 15px 0px;/*左下だけ尖らせて吹き出し感を出す*/
+                margin-right: 100px;/*左側の発言だとわかる様に、吹き出し右側に隙間を入れる*/
+            }
+    /* メッセージ２（右側） */
+    .bms_right {
+        float: right;/*吹き出しをbms_messagesに対して右寄せ*/
+        line-height: 1.3em;
+    }
+    	.bms_right .bms_message_box {
+                color: #333;/*テキストを黒にする*/
+                background: #fff;
+                border: 2px solid #aa008c;
+
+                border-radius: 15px 15px 0px 15px;/*右下だけ尖らせて吹き出し感を出す*/
+                margin-left: 100px;/*右側の発言だとわかる様に、吹き出し左側に隙間を入れる*/
+            }
+    /* 回り込みを解除 */
+    .bms_clear {
+        clear: both; /* 左メッセージと右メッセージの回り込み(float)の効果の干渉を防ぐために必要（これが無いと、自分より下のメッセージにfloatが影響する） */
+
+    }
+
+    .icon{
+    	border:none;
+    	background: #aa008c;
+    	width:60px;
+    	height:60px;
+    	border-radius: 30px;
+    	position: fixed;
+    	bottom: 80px;                /* 位置(下0px) */
+        right: 100px;                  /* 位置(左0px) */
+        text-align: center;
+        background-image: url(https://cdn.channel.io/plugin/images/plugin-bubble-icon-white.png);
+        background-size: cover;
+
+
+    }
+
+
+    .icon:hover {
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, .4);
+
+	}
+
+
+

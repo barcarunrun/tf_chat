@@ -1,0 +1,125 @@
+{% load staticfiles %}
+{% csrf_token %}
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>TF_Chat</title>
+    <meta charset="UTF-8">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="shortcut icon"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <link href="https://fonts.google.com/?query=proxima+nova" rel="stylesheet">
+    <script type="text/javascript" src="{% static 'js/logic.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+<button id="buttom" class="icon" onclick="fadeOut();fadeIn(document.querySelector('.chat'), 1000);"></button>
+
+
+<div class="chat" id="chat">
+    <base target="_blank">
+    <div class="chat-header">
+        <div class="chat-header-icon" style="padding-top: 10px">
+            <button class="buttom-header"
+                    onclick="fadeOutChat();fadeIn(document.querySelector('.icon'), 1000);Delete();">
+                <i class="far fa-times-circle" style="font-size: 15px"></i>
+            </button>
+        </div><!--
+            <div class="chat-header-title">
+            	<b>WebChat</b>
+            </div>
+            <div class="chat-header-bottom">
+            	<b>Techforward.Inc</b>
+            </div>
+            -->
+    </div>
+
+
+    <div class="chat-body">
+
+        <div id="bms_messages">
+
+
+            <div class="bms_message bms_left">
+                <div class="bms_message_box">
+                    <div class="bms_message_content">
+                        <div class="bms_message_text">何かお手伝い致しましょうか?</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bms_clear"></div>
+
+            <!--メッセージ２（右側）-->
+            <!--
+            <div class="bms_message bms_right" id="return_message">
+                <div class="bms_message_box">
+                    <div class="bms_message_content">
+                        <div class="bms_message_text" id="output"></div>
+                    </div>
+                </div>
+            </div>
+            -->
+
+            <div class="bms_clear"></div><!-- 回り込みを解除（スタイルはcssで充てる） -->
+        </div>
+
+
+    </div>
+
+    <div class="chat-footer">
+        <div class="chat-footer-contet">
+            <form action="http://127.0.0.1:8000/" method="post" target="iframe">
+                                {% csrf_token %}
+
+            <table>
+                <tr>
+                    <th>
+                        <textarea class="message-form" id="message" name="kanso" rows="1" cols="29"
+                                  placeholder="Type your message" autofocus></textarea>
+                    </th>
+                    <th>
+                        <div style="width:30px;">
+                                <input id='userId' type="hidden" name="userId" value="">
+                                <input id='Question' type="hidden" name="Question" value="">
+                                <input id='AnswerNo' type="hidden" name="AnswerNo" value="">
+                                <input id='Answer' type="hidden" name="Answer" value="">
+                                <input id='Withdrawal' type="hidden" name="Withdrawal" value="">
+
+                                <button type="submit" class="buttom"
+                                        onclick="
+                                        postForm('user','1','予約はこちらです','False');
+                                        Execute();" >
+
+                                    <i class="far fa-comments" style="font-size:14px;"></i>
+                                </button>
+
+
+                        </div>
+                    </th>
+                </tr>
+            </table>
+                </form>
+        </div>
+    </div>
+</div>
+<iframe name="iframe" style="display: none"></iframe>
+<div id="request" >
+{{request.session.json}}
+</div>
+
+</body>
+</html>

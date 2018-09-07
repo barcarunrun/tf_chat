@@ -2,7 +2,6 @@ var now = new Date();
 var NextAnswerId = 0;
 
 
-
 //フェードの処理
 function fadeIn() {
     $('#chat').fadeIn();
@@ -65,23 +64,20 @@ function postForm(userId, Withdrawal) {
     var Para = document.getElementById("message").value;
     var flag=false;
     for (var i in jsonGet) {
-        if (jsonGet[i]['Keyword'] != '') {
-            if (Para.match(jsonGet[i]['Keyword'])) {
-                document.getElementById("AnswerNo").value = jsonGet[i]['id'];
-                document.getElementById("Answer").value = jsonGet[i]['answer'];
+        if (jsonGet[i].Keyword != '') {
+            if (Para.match(jsonGet[i].Keyword)) {
+
+                document.getElementById("AnswerNo").value = jsonGet[i].IdPerUser;
+                document.getElementById("Answer").value = jsonGet[i].Answer;
                 var flag=true;
             }
         }
     }
 
     if(flag==false)
-    {   var superHeroes = request.response;
-    var str = JSON.stringify(superHeroes);
-
-         var  jsonGet=str
-        console.log('80jsonGet:'+jsonGet)
-        document.getElementById("AnswerNo").value = jsonGet[0]['id'];
-        document.getElementById("Answer").value = jsonGet[0]['answer'];
+    {
+        document.getElementById("AnswerNo").value = jsonGet[0].IdPerUser;
+        document.getElementById("Answer").value = jsonGet[0].Answer;
     }
     document.getElementById("userId").value = userId;
     document.getElementById("Question").value = document.getElementById("message").value;
@@ -162,7 +158,6 @@ function addReturnMessage() {
 function addMessage() {
     var idPara = 0;
     var ReturnNum = 0;
-     //console.log('jsonGet123:'+jsonGet[0]);
     for (var i in jsonGet) {
         if(idPara!=0){
             console.log('kokoidPara:'+idPara)
@@ -174,22 +169,19 @@ function addMessage() {
              ReturnNum=idPara
         }
     }
-    console.log('5678ReturnNum'+ReturnNum)
-    console.log('jsonGet[ReturnNum][question][Q1]'+jsonGet[ReturnNum]['question']['Q1'])
+    console.log('jsonGet[ReturnNum][Q1]'+jsonGet[ReturnNum].Q1)
 
     if (ReturnNum == 0) {
-        insertDataLeft(jsonGet[0]['answer'], jsonGet[0]['url'])
+        insertDataLeft(jsonGet[0].Answer, jsonGet[0].URL)
     }
     console.log('ReturnNum下:'+ReturnNum)
     return ReturnNum
 }
 
-var jsonGet="";
-//var jsonGet=document.getElementById('request').innerHTML;
+
 //ボタンを押下時に実行
 function Execute() {
     var huga = 0;
-    parapara=document.getElementById('request').innerHTML;
 
     var para = addReturnMessage()
 
@@ -197,7 +189,7 @@ function Execute() {
         function () {
 
             NextAnswerId = addMessage();
-              if(jsonGet[NextAnswerId]['question']['Q1']==' ')
+              if(jsonGet[NextAnswerId].Q1==' ')
               {
                 //ReturnがなにもなければNextAnswerIdを0にする（ストーリーの処理ではない）
                 NextAnswerId=0;
@@ -236,91 +228,97 @@ function MakeReturn(id) {
     var Para = document.getElementById("message").value;
     var Returnid = 0;
     console.log('NextAnswerId:' + NextAnswerId+'Para:'+Para)
+    console.log('6666666666666NextAnswerId:' +jsonGet[6].Answer)
 
     if (NextAnswerId != 0) {
         console.log('対話')
       //  console.log('jsonGet[NextAnswerId][\'question\']:' + jsonGet[NextAnswerId]['question']['Q1'])
-        if (jsonGet[NextAnswerId]['question']['Q1'] != ' ') {
-            if (Para.match(jsonGet[NextAnswerId]['question']['Q1'])) {
+        if (jsonGet[NextAnswerId].Q1 != '') {
+            if (Para.match(jsonGet[NextAnswerId].Q1)) {
                 console.log('A1')
                 insertDataLeft('こちらでいかがでしょうか',);
                 //console.log('jsonGet[NextAnswerId][question][A1]:'+jsonGet[NextAnswerId]['NextAnswerNo']['A1'])
-                var NextNo=jsonGet[NextAnswerId]['NextAnswerNo']['A1'];
-                response = jsonGet[NextNo]['answer'];
-                URL = jsonGet[NextNo]['url'];
+                var NextNo=jsonGet[NextAnswerId].A1;
+                console.log('NextNo:'+NextNo)
+                response = jsonGet[NextNo].Answer;
+                URL = jsonGet[NextNo].URL;
                 insertDataLeft(response, URL);
-                Returnid = jsonGet[NextNo]['id'];
+                Returnid = jsonGet[NextNo].IdPerUser;
             }
         }
-        if (jsonGet[NextAnswerId]['question']['Q2'] != ' ') {
-            if (Para.match(jsonGet[NextAnswerId]['question']['Q2'])) {
+        if (jsonGet[NextAnswerId].Q2 != '') {
+            if (Para.match(jsonGet[NextAnswerId].Q2)) {
                 console.log('A2')
                 insertDataLeft('こちらでいかがでしょうか',);
-                var NextNo=jsonGet[NextAnswerId]['NextAnswerNo']['A2'];
-                response = jsonGet[NextNo]['answer'];
-                URL = jsonGet[NextNo]['url'];
+                var NextNo=jsonGet[NextAnswerId].A2;
+                response = jsonGet[NextNo].Answer;
+                URL = jsonGet[NextNo].URL;
                 insertDataLeft(response, URL);
-                Returnid = jsonGet[NextNo]['id'];
+                Returnid = jsonGet[NextNo].IdPerUser;
             }
         }
-         if (jsonGet[NextAnswerId]['question']['Q3'] != ' ') {
-            if (Para.match(jsonGet[NextAnswerId]['question']['Q3'])) {
+         if (jsonGet[NextAnswerId]['Q3'] != '') {
+            if (Para.match(jsonGet[NextAnswerId].Q3)) {
                 console.log('A3')
                 insertDataLeft('こちらでいかがでしょうか',);
-                var NextNo=jsonGet[NextAnswerId]['NextAnswerNo']['A3'];
-                response = jsonGet[NextNo]['answer'];
-                URL = jsonGet[NextNo]['url'];
+                var NextNo=jsonGet[NextAnswerId].A3;
+                console.log('NextNo:'+NextNo)
+
+                console.log('6NextAnswerId:' +jsonGet[6].Answer)
+                console.log('６６NextNo:'+NextNo)
+                response = jsonGet[NextNo].Answer;
+                URL = jsonGet[NextNo].URL;
                 insertDataLeft(response, URL);
-                Returnid = jsonGet[NextNo]['id'];
+                Returnid = jsonGet[NextNo].IdPerUser;
             }
         }
-         if (jsonGet[NextAnswerId]['question']['Q4'] != ' ') {
-            if (Para.match(jsonGet[NextAnswerId]['question']['Q4'])) {
+         if (jsonGet[NextAnswerId]['Q4'] != '') {
+            if (Para.match(jsonGet[NextAnswerId].Q4)) {
                 console.log('A4')
                 insertDataLeft('こちらでいかがでしょうか',);
                 console.log('NextAnswerId:'+NextAnswerId)
 
 
-                var NextNo=jsonGet[NextAnswerId]['NextAnswerNo']['A4'];
+                var NextNo=jsonGet[NextAnswerId].A4;
+                NextNo=zenhan(NextNo)
                 console.log('NextNo:'+NextNo)
 
-                response = jsonGet[NextNo]['answer'];
-                URL = jsonGet[NextNo]['url'];
+                response = jsonGet[NextNo].Answer;
+                URL = jsonGet[NextNo].URL;
                 insertDataLeft(response, URL);
-                Returnid = jsonGet[NextNo]['id'];
+                Returnid = jsonGet[NextNo].IdPerUser;
             }
         }
-         if (jsonGet[NextAnswerId]['question']['Q5'] != ' ') {
-            if (Para.match(jsonGet[NextAnswerId]['question']['Q5'])) {
+         if (jsonGet[NextAnswerId]['Q5'] != '') {
+            if (Para.match(jsonGet[NextAnswerId].Q5)) {
                 console.log('A5')
                 insertDataLeft('こちらでいかがでしょうか',);
-               var NextNo=jsonGet[NextAnswerId]['NextAnswerNo']['A5'];
-                response = jsonGet[NextNo]['answer'];
-                URL = jsonGet[NextNo]['url'];
+               var NextNo=jsonGet[NextAnswerId].A5;
+               response = jsonGet[NextNo].Answer;
+                URL = jsonGet[NextNo].URL;
                 insertDataLeft(response, URL);
-                Returnid = jsonGet[NextNo]['id'];
+                Returnid = jsonGet[NextNo].IdPerUser;
             }
         }
 
     }
     else {
         console.log('単発')
-        console.log('id:'+id)
-
-        if (jsonGet[id]['Keyword'] != '') {
-            if (Para.match(jsonGet[id]['Keyword'])) {
+        console.log('jsonGet[id]:'+jsonGet[0].Answer)
+        if (jsonGet[id].Keyword != '') {
+            if (Para.match(jsonGet[id].Keyword)) {
                 insertDataLeft('こちらでいかがでしょうか',);
-                response = jsonGet[id]['answer'];
-                URL = jsonGet[id]['url'];
+                response = jsonGet[id].Answer;
+
+                URL = jsonGet[id].URL;
                 insertDataLeft(response, URL);
-                Returnid = jsonGet[id]['id'];
-                console.log('Returnid:'+Returnid)
+                Returnid = jsonGet[id].IdPerUser;
             }
             else {
 
             }
             console.log('111111Returnid:'+Returnid)
-        if(jsonGet[Returnid]['question']['Q1']==' ')
+        if(jsonGet[Returnid].Q1==undefined)
         {
             NextAnswerId=0;
             console.log('yes')
@@ -330,6 +328,35 @@ function MakeReturn(id) {
     }
     return Returnid
 }
+
+
+var requestURL = 'http://127.0.0.1:8000/api/qa/?format=json';
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
+var superHeroes = request.response;
+request.onload = function() {
+     jsonGet = request.response;
+    //var str = jQuery.parseJSON(JSON.stringify(superHeroes));
+
+    //console.log('superHeroes:'+str)
+    //var jsonGet=str
+    //console.log('superHeroes:'+jsonGet[0])
+    console.log('lastjsonGet:'+jsonGet[0].Answer)
+    console.log('lastjsonGet6:'+jsonGet[6].Answer)
+    console.log('lastjsonGet[0]IdPerUser:'+jsonGet[0].IdPerUser)
+
+}
+
+
+function zenhan(a){
+ //10進数の場合
+ a = a.replace(/[Ａ-Ｚａ-ｚ０-９]/g, (s) => {
+  return String.fromCharCode(s.charCodeAt(0) - 65248);
+ })
+}
+
 /*
 var jsonGet = [
     {
@@ -392,17 +419,3 @@ var jsonGet = [
 var str = JSON.stringify(jsonGet);
 console.log('jsonGet:'+str)
 */
-
-var requestURL = 'http://127.0.0.1:8000/api/qa/?format=json';
-var request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
-request.onload = function() {
-  var superHeroes = request.response;
-    var str = JSON.stringify(superHeroes);
-
-  console.log('superHeroes:'+str)
-  var  jsonGet=str
-    console.log('jsonGet:'+jsonGet)
-}

@@ -24,6 +24,14 @@ from django.contrib import admin
 
 from chat.urls import router as chat_router
 
+from rest_framework import routers
+from chat.views import QAViewSet
+
+
+router = routers.DefaultRouter()
+router.register(r'qa', QAViewSet)
+
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
      url(r'^$', views.index, name='index'),
@@ -32,31 +40,6 @@ urlpatterns = [
     url(r'^top/', views.topPage, name='top'),
     url(r'^qa/', views.qa, name='qa'),
     url(r'^test/', views.test, name='test'),
-
-
-
-
-
-#url(r'^$',
- #       views.MemoListView.as_view(),
-  #      name='memo_list'),
-
-    url(r'^detail/(?P<pk>\d+)/$',
-        views.MemoDetailView.as_view(),
-        name='memo_detail'),
-
-    url(r'^create/$',
-        views.MemoCreateView.as_view(),
-        name='memo_create'),
-
-    url(r'^update/(?P<pk>\d+)/$',
-        views.MemoUpdateView.as_view(),
-        name='memo_update'),
-
-    url(r'^delete/(?P<pk>\d+)/$',
-        views.MemoDeleteView.as_view(),
-        name='memo_delete'),
-
-    url(r'^api/', include(chat_router.urls)),
+    url(r'^api/', include(router.urls)),
 ]
 

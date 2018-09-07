@@ -6,7 +6,6 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, Permis
 from django.db import models
 from datetime import datetime
 
-
 # Create your models here.
 
 class AuthUserManager(BaseUserManager):
@@ -45,7 +44,6 @@ class AuthUserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-
 class AuthUser(AbstractBaseUser, PermissionsMixin):
     """
     ユーザ情報を管理する
@@ -68,7 +66,6 @@ class AuthUser(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         return self.username
 
-
 class Log(models.Model):
     userId = models.CharField(max_length=30)
     DateTime = models.DateTimeField(auto_now_add=True)
@@ -78,52 +75,24 @@ class Log(models.Model):
     Withdrawal=models.BooleanField(default=False)
 
 
+
 class QA(models.Model):
-    Keyword = models.CharField(max_length=100)
+    Keyword = models.CharField(max_length=100,blank=True, null=True)
     Answer = models.CharField(max_length=200)
     URL=models.URLField(max_length=300)
-    NextAnswerNo = models.BigIntegerField()
-    Question = models.CharField(max_length=200)
+    #NextAnswerNo = models.BigIntegerField()
+    #Question = models.CharField(max_length=200)
     userId = models.CharField(verbose_name='ユーザID',
                                 unique=False,
                                 max_length=30)
-
-class Item(models.Model):
-    name = models.CharField(max_length=20)
-    value = models.IntegerField()
-
-
-class Memo(models.Model):
-    """
-    メモモデル。実質、件名と本文のみ。
-    """
-    subject = models.CharField(
-        verbose_name='件名',
-        max_length=100,
-        default='',
-        blank=True
-    )
-
-    body = models.TextField(
-        verbose_name='本文',
-        default='',
-        blank=True
-    )
-
-    # created: auto_now_add を指定すると、作成日時を自動保存する
-    created = models.DateTimeField(
-        auto_now_add=True
-    )
-
-    # updated: auto_now を指定すると、更新日時を自動保存する
-    updated = models.DateTimeField(
-        auto_now=True
-    )
-
-    def __str__(self):
-        return self.subject
-
-
-
-
-
+    Q1 = models.CharField(max_length=10, blank=True, null=True)
+    Q2 = models.CharField(max_length=10, blank=True, null=True)
+    Q3 = models.CharField(max_length=10, blank=True, null=True)
+    Q4 = models.CharField(max_length=10, blank=True, null=True)
+    Q5 = models.CharField(max_length=10, blank=True, null=True)
+    A1 = models.CharField(max_length=10, blank=True, null=True)
+    A2 = models.CharField(max_length=10, blank=True, null=True)
+    A3 = models.CharField(max_length=10, blank=True, null=True)
+    A4 = models.CharField(max_length=10, blank=True, null=True)
+    A5 = models.CharField(max_length=10, blank=True, null=True)
+    IdPerUser=models.CharField(max_length=10)

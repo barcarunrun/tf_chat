@@ -31,7 +31,16 @@ from extra_views import CreateWithInlinesView, InlineFormSet
 
 from django.views.generic import ListView
 
+from .forms import ItemFormSet2,ItemForm
+from django.core.cache import cache
 
+from django import forms
+from django.forms import formsets
+from django.forms import models
+
+
+
+from django.utils import six
 
 # Create your views here.
 
@@ -63,7 +72,61 @@ def topPage(request):
     return render(request, 'TopPage.html')
 
 def qa(request):
-    return render(request, 'QA.html')
+    if request.method != 'POST':
+        formset = ItemFormSet2
+        return render(request, 'QA.html', {'formset': formset,})
+
+    cache.clear()
+    insertNum = int(request.POST['buttom']) - 1  # formは０からはじまるため
+    print ('buttom:' + request.POST['buttom'])
+    if request.POST['form-'+str(insertNum)+'-id']!='':
+        serachNum=int(request.POST['form-'+str(insertNum)+'-id'])
+        serachObj=QA.objects.filter(id=str(serachNum))
+
+   # print ('serachObj:' + str(serachObj.values()))
+    #print ('serachObj.count():'+str(serachObj.count()))
+
+    if request.POST['form-'+str(insertNum)+'-id']=='':
+        print ('hogehoge')
+        insert_data = QA(Keyword =request.POST['form-'+str(insertNum)+'-Keyword'],
+                         Answer =request.POST['form-'+str(insertNum)+'-Answer'],
+                         URL=request.POST['form-'+str(insertNum)+'-URL'],
+                         userId='user',
+                         Q1 =request.POST['form-'+str(insertNum)+'-Q1'],
+                         Q2 =request.POST['form-'+str(insertNum)+'-Q2'],
+                         Q3 =request.POST['form-'+str(insertNum)+'-Q3'],
+                         Q4 =request.POST['form-'+str(insertNum)+'-Q4'],
+                         Q5 =request.POST['form-'+str(insertNum)+'-Q5'],
+                         A1 =request.POST['form-'+str(insertNum)+'-A1'],
+                         A2 =request.POST['form-'+str(insertNum)+'-A2'],
+                         A3 =request.POST['form-'+str(insertNum)+'-A3'],
+                         A4 =request.POST['form-'+str(insertNum)+'-A4'],
+                         A5  =request.POST['form-'+str(insertNum)+'-A5'],
+                         IdPerUser=insertNum-1
+        )
+        insert_data.save()
+    else :
+        print ('hugahuga')
+        serachObj = QA.objects.get(id=str(serachNum))
+        serachObj.Keyword = request.POST['form-'+str(insertNum)+'-Keyword']
+        serachObj.Answer = request.POST['form-' + str(insertNum) + '-Answer']
+        serachObj.URL = request.POST['form-' + str(insertNum) + '-URL']
+        serachObj.Q1 = request.POST['form-' + str(insertNum) + '-Q1']
+        serachObj.Q2 = request.POST['form-' + str(insertNum) + '-Q2']
+        serachObj.Q3 = request.POST['form-' + str(insertNum) + '-Q3']
+        serachObj.Q4 = request.POST['form-' + str(insertNum) + '-Q4']
+        serachObj.Q5 = request.POST['form-' + str(insertNum) + '-Q5']
+        serachObj.A1 = request.POST['form-' + str(insertNum) + '-A1']
+        serachObj.A2 = request.POST['form-' + str(insertNum) + '-A2']
+        serachObj.A3 = request.POST['form-' + str(insertNum) + '-A3']
+        serachObj.A4 = request.POST['form-' + str(insertNum) + '-A4']
+        serachObj.A5 = request.POST['form-' + str(insertNum) + '-A5']
+        serachObj.save()
+
+    num = 30 - QA.objects.filter(userId='user').count()
+    formset = formsets.formset_factory(ItemForm, extra=num, formset=models.BaseModelFormSet)(queryset=QA.objects.filter(userId='user'))
+    formset.model = QA
+    return render(request, 'QA.html', {'formset': formset })
 
 def setting(request):
     return render(request, 'Setting.html')
@@ -80,98 +143,16 @@ def test(request):
         return redirect('test')
     return render(request, 'test.html', {'formset': formset,'profile_form':f})
 
-class MyListView(ListView):
-    model = QA
-
-
-from django.contrib import messages
-from django.urls import reverse_lazy
-from django.views.generic import \
-    ListView, DetailView, CreateView, UpdateView, DeleteView
-
-from .models import Memo
-from .forms import MemoForm
-
-
-class MemoListView(ListView):
-    """
-    メモを一覧表示
-    テンプレートは、何も指定しないと モデル名_list.html が使われる
-    ListView は、パジネーションもやってくれる
-    """
-    model = Memo
-    paginate_by = 10  # 1ページに表示する件数
-
-
-class MemoDetailView(DetailView):
-    """
-    1つのメモを詳細表示
-    テンプレートは、何も指定しないと モデル名_detail.html が使われる
-    """
-    model = Memo
-
-
-class MemoCreateView(CreateView):
-    """
-    メモ 新規作成
-    完了ページを作成し、success_url で指定して表示してもいいが、
-    django.contrib.messages の機能で、メッセージを保存して
-    リストビューなんかに戻した時に表示するのも簡潔で良い。
-    """
-    model = Memo
-    form_class = MemoForm
-    success_url = reverse_lazy('memo_list')
-
-    def form_valid(self, form):
-        result = super(MemoCreateView,self).form_valid(form)
-        messages.success(
-            self.request, '「{}」を作成しました'.format(form.instance))
-        return result
-
-
-class MemoUpdateView(UpdateView):
-    """
-    メモ 更新
-    """
-    model = Memo
-    form_class = MemoForm
-
-    success_url = reverse_lazy('memo_list')
-
-    def form_valid(self, form):
-        result = super(MemoUpdateView,self).form_valid(form)
-        messages.success(
-            self.request, '「{}」を更新しました'.format(form.instance))
-        return result
-
-
-class MemoDeleteView(DeleteView):
-    """
-    メモ 削除
-    デフォルトでは、get でリクエストすると確認ページ、
-    post でリクエストすると削除を実行する、という動作。
-    実際は、レコードを削除するのではなく有効フラグを消す(いわゆる論理削除)
-    のケースが多いと思うので、そんな時はdeleteをオーバーライドしてその中で処理を書く。
-    """
-    model = Memo
-    form_class = MemoForm
-
-    success_url = reverse_lazy('memo_list')
-
-    def delete(self, request, *args, **kwargs):
-        result = super(MemoDeleteView,self).delete(request, *args, **kwargs)
-        messages.success(
-            self.request, '「{}」を削除しました'.format(self.object))
-        return result
 
 # coding: utf-8
 import django_filters
 from rest_framework import viewsets, filters
 
 from .models import QA
-from .serializer import QASerializer
+from .serializer import QASerializer,QAFilter
+
 
 
 class QAViewSet(viewsets.ModelViewSet):
-    queryset = QA.objects.all()
+    queryset = QA.objects.filter(userId='user').order_by('IdPerUser')
     serializer_class = QASerializer

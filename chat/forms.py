@@ -8,14 +8,23 @@ from django.core.cache import cache
 
 #ItemFormSet =forms.modelformset_factory(QA, extra=1)
 
+class LoginForm(forms.Form):
+    username = forms.CharField()
+    password = forms.CharField(widget=forms.PasswordInput)
+
+
 
 class ItemForm(forms.ModelForm):
     class Meta:
         model = QA
         fields = '__all__'
-cache.clear()
-num=30-QA.objects.filter(userId='user').count()
-ItemFormSet2 = formsets.formset_factory(ItemForm, extra=num, formset=models.BaseModelFormSet)(queryset=QA.objects.filter(userId='user'))
-ItemFormSet2.model = QA
 
+
+
+num=30-QA.objects.filter(userId='user').count()
+#num=0
+def create(user):
+    ItemFormSet2 = formsets.formset_factory(ItemForm, extra=num, formset=models.BaseModelFormSet)(queryset=QA.objects.filter(userId=user))
+    ItemFormSet2.model = QA
+    return ItemFormSet2
 

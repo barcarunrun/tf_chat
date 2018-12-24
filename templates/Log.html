@@ -9,38 +9,24 @@
 
 	<title>TF_Chat</title>
 
+	<meta charset="utf-8" />
+	<link rel="apple-touch-icon" sizes="76x76" href="">
+	<link rel="icon" type="image/png" sizes="96x96" href="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>TF_Chat</title>
+
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 
-
-    <!-- Bootstrap core CSS     -->
-    <link href={% static 'assets/css/bootstrap.min.css' %} rel="stylesheet" />
-
-    <!-- Animation library for notifications
-    <link href="assets/css/animate.min.css" rel="stylesheet"/>
-    -->
-
-    <link href={% static 'assets/css/animate.min.css' %} rel="stylesheet" />
-
-    <!--  Paper Dashboard core CSS
-    <link href="assets/css/paper-dashboard.css" rel="stylesheet"/>
-    -->
-    <link href={% static 'assets/css/paper-dashboard.css' %} rel="stylesheet"/>
+    <link href="/static/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/static/assets/css/animate.min.css" rel="stylesheet" />
+    <link href="/static/assets/css/paper-dashboard.css" rel="stylesheet"/>
+    <link href="/static/assets/css/themify-icons.css" rel="stylesheet"/>
 
 
-    <!--  CSS for Demo Purpose, don't include it in your project
-    <link href="assets/css/demo.css" rel="stylesheet" />-->
-
-    <link href={% static 'assets/css/demo.css' %} rel="stylesheet"/>
 
 
-    <!--  Fonts and icons     -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
-    <!--
-    <link href="assets/css/themify-icons.css" rel="stylesheet">
-    -->
-    <link href={% static 'assets/css/themify-icons.css' %} rel="stylesheet"/>
 
 </head>
 <body>
@@ -73,14 +59,21 @@
                         <p>QA</p>
                     </a>
                 </li>
-                <li class="active">
+     <!--           <li class="active">
                     <a href="/log">
                         <i class="ti-server"></i>
                         <p>Log</p>
                     </a>
                 </li>
-                <li>
-                    <a href="/setting">
+   -->
+                <li >
+                    <a href="/test" >
+                        <i class="ti-pin-alt"></i>
+                        <p>Test</p>
+                    </a>
+                </li>
+                 <li>
+                    <a href="/setting" >
                         <i class="ti-settings"></i>
                         <p>Setting</p>
                     </a>
@@ -107,7 +100,7 @@
         </nav>
 
 
-        <div class="content">
+        <div class="content" style="padding-top: 100px">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
@@ -120,54 +113,20 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <th style="width:5%">No</th>
-                                        <th style="width:10%">DateTime</th>
-                                        <th style="width:42%">Question</th>
-                                        <th style="width:43%">Answer</th>
+                                        <th style="width:20%">DateTime</th>
+                                        <th style="width:37%">Question</th>
+                                        <th style="width:38%">Answer</th>
 
                                     </thead>
                                     <tbody>
+                                     {% for log in Logs %}
                                         <tr>
-                                            <td>1</td>
-                                            <td>2018/09/21/ 07:25:55</td>
-                                            <td>予約をしたい</td>
-                                            <td>航空券購入後の、受託手荷物を別途追加について。</td>
-
+                                            <td>{{ forloop.counter }}</td>
+                                            <td>{{ log.DateTime }}</td>
+                                            <td>{{ log.Question }}</td>
+                                            <td>{{ log.Answer }}</td>
                                         </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>2018/09/21/ 07:25:55</td>
-                                            <td>予約をしたい</td>
-                                            <td>航空券購入後の、受託手荷物を別途追加について。</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>2018/09/21/ 07:25:55</td>
-                                            <td>予約をしたい</td>
-                                            <td>航空券購入後の、受託手荷物を別途追加について。</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>2018/09/21/ 07:25:55</td>
-                                            <td>予約をしたい</td>
-                                            <td>航空券購入後の、受託手荷物を別途追加について。</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>2018/09/21/ 07:25:55</td>
-                                            <td>予約をしたい</td>
-                                            <td>航空券購入後の、受託手荷物を別途追加について。</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>2018/09/21/ 07:25:55</td>
-                                            <td>予約をしたい</td>
-                                            <td>航空券購入後の、受託手荷物を別途追加について。</td>
-
-                                        </tr>
+                                     {% endfor %}
                                     </tbody>
                                 </table>
 
@@ -183,7 +142,7 @@
             <div class="container-fluid">
 
                 <div class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script>, create by <a href="http://www.creative-tim.com">Techforward.Inc</a>
+                    &copy; <script>document.write(new Date().getFullYear())</script>, create by <a href="http://www.techforward.co.jp/">Techforward.Inc</a>
                 </div>
             </div>
         </footer>
@@ -194,32 +153,6 @@
 
 </body>
 
-     <!--   Core JS Files   -->
-    <script type="text/javascript" src="{% static 'assets/js/jquery-1.10.2.js' %}"></script>
-    <script type="text/javascript" src="{% static 'assets/js/bootstrap.min.js' %}"></script>
-
-	<!--  Checkbox, Radio & Switch Plugins -->
-
-    <script type="text/javascript" src="{% static 'assets/js/bootstrap-checkbox-radio.js' %}"></script>
-	<!--  Charts Plugin -->
-
-    <script type="text/javascript" src="{% static 'assets/js/chartist.min.js' %}"></script>
-
-
-    <!--  Notifications Plugin    -->
-
-    <script type="text/javascript" src="{% static 'assets/js/bootstrap-notify.js' %}"></script>
-	<script type="text/javascript" src="{% static 'assets/js/bootstrap-notify.js' %}"></script>
-
-
-    <!--  Google Maps Plugin    -->
-    <script type="text/javascript" src="{% static 'https://maps.googleapis.com/maps/api/js' %}"></script>
-
-    <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
-    <script type="text/javascript" src="{% static 'assets/js/paper-dashboard.js' %}"></script>
-
-	<!-- Paper Dashboard DEMO methods, don't include it in your project! -->
-    <script type="text/javascript" src="{% static 'assets/js/demo.js' %}"></script>
 
 
 

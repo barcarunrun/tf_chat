@@ -5,11 +5,12 @@ from django.utils.encoding import python_2_unicode_compatible
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.db import models
 from datetime import datetime
+from django.utils import timezone
 
 # Create your models here.
 
 class AuthUserManager(BaseUserManager):
-    def create_user(self, userId, password):
+    def create_user(self, username, password):
         """
         ユーザ作成
 
@@ -17,29 +18,32 @@ class AuthUserManager(BaseUserManager):
         :param password: パスワード
         :return: AuthUserオブジェクト
         """
-        if not userId:
+        if not username:
             raise ValueError('Users must have an username')
 
-        user = self.model(username=userId,
+        user = self.model(username=username,
                           password=password,
                           )
         user.adminFlag = False
+
+        user.set_password(password)
         user.set_password(password)
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, userId, password):
+    def create_superuser(self, username, password):
         """
         スーパーユーザ作成
 
-        :param userId: ユーザID
+        :param username: ユーザID
         :param password: パスワード
         :return: AuthUserオブジェクト
         """
-        user = self.create_user(username=userId,
+        user = self.create_user(username=username,
                                 password=password
                                 )
         user.is_superuser = True
+        user.LoginTimes = datetime.now()
         user.adminFlag = True
         user.save(using=self._db)
         return user
@@ -52,13 +56,13 @@ class AuthUser(AbstractBaseUser, PermissionsMixin):
         verbose_name = 'ユーザ'
         verbose_name_plural = 'ユーザ'
 
-    username = models.CharField(verbose_name='ユーザID',
+    username = models.CharField(verbose_name='ユーザ名称',
                                 unique=True,
                                 max_length=30)
 
     adminFlag = models.BooleanField(verbose_name='管理者フラグ',
                                     default=False)
-    LoginTimes=models.BigIntegerField()
+    #LoginTimes=models.BigIntegerField()
     recent_login_date = models.DateTimeField(auto_now_add=True)
     USERNAME_FIELD = 'username'
     objects = AuthUserManager()
@@ -95,4 +99,5 @@ class QA(models.Model):
     A3 = models.CharField(max_length=10, blank=True, null=True)
     A4 = models.CharField(max_length=10, blank=True, null=True)
     A5 = models.CharField(max_length=10, blank=True, null=True)
-    IdPerUser=models.CharField(max_length=10)
+    IdPerUser=models.IntegerField()
+    userKey=models.CharField(max_length=100)

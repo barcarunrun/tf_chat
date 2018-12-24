@@ -18,19 +18,395 @@
           integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
     <link href="https://fonts.google.com/?query=proxima+nova" rel="stylesheet">
-    <script type="text/javascript" src="{% static 'js/logic.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!--<script type="text/javascript" src="/static/js/logic.js"></script>-->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="http://www.techforward.co.jp/tfchat/js/Key.js"></script>
+
+    <!--<script src="/static/js/Key.js"></script>-->
+    <!--<script type="text/javascript" src="{% static 'js/Key.js' %}"></script>-->
+
+    <!--<script type="text/javascript" src="{% static 'js/logic.js' %}"></script>-->
+    <!--<link rel="stylesheet" href="{% static 'css/style.css' %}">-->
     <!--[if lt IE 9]>
 	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
 
+
+<script>
+    var a='{{ request.session.userKey }}';
+
+    try{
+    var userKey=getUserKey();
+
+    }
+    catch (e) {
+        var userKey='';
+    }
+    if(a!='')
+    {
+
+        var userKey=a;
+    }
+    else
+    {
+    }
+    var requestURL = 'http://tfchat.work/api/?userKey='+userKey;
+
+    var now = new Date();
+    var NextAnswerId = 0;
+    window.sessionStorage.setItem(['useKey'],[userKey]);
+    var a = window.sessionStorage.getItem(['useKey']);
+
+//フェードの処理
+function fadeIn() {
+    $('#chat').fadeIn();
+}
+
+function fadeOut() {
+    $('#buttom').fadeOut();
+}
+
+function fadeOutChat() {
+    $('.chat').fadeOut();
+}
+
+function fadeIn(node, duration) {
+    // display: noneでないときは何もしない
+    if (getComputedStyle(node).display !== 'none') return console.log(5);
+
+    // style属性にdisplay: noneが設定されていたとき
+    if (node.style.display === 'none') {
+        node.style.display = 'block';
+
+    } else {
+        node.style.display = 'block';
+
+    }
+    node.style.opacity = 0;
+
+    var start = performance.now();
+
+
+    requestAnimationFrame(function tick(timestamp) {
+        // イージング計算式（linear）
+        var easing = (timestamp - start) / duration;
+
+        // opacityが1を超えないように
+        node.style.opacity = Math.min(easing, 1);
+
+        // opacityが1より小さいとき
+        if (easing < 1) {
+            requestAnimationFrame(tick);
+
+        } else {
+            node.style.opacity = '';
+
+        }
+    });
+}
+
+
+//スクロールのための処理
+function scroll() {
+    scrollingElement = document.querySelector('#bms_messages');
+    scrollingElement.scrollTop = scrollingElement.scrollHeight;
+
+}
+
+
+//postするLogデータの編集
+function postForm(userId, Withdrawal) {
+    var Para = document.getElementById("message").value;
+    var flag=false;
+    for (var i in jsonGet) {
+        if (jsonGet[i].Keyword != '') {
+            if (Para.match(jsonGet[i].Keyword)) {
+
+                document.getElementById("AnswerNo").value = jsonGet[i].IdPerUser;
+                document.getElementById("Answer").value = jsonGet[i].Answer;
+                var flag=true;
+            }
+        }
+    }
+
+    if(flag==false)
+    {
+        document.getElementById("AnswerNo").value = jsonGet[0].IdPerUser;
+        document.getElementById("Answer").value = jsonGet[0].Answer;
+    }
+    document.getElementById("userId").value = userId;
+    document.getElementById("Question").value = document.getElementById("message").value;
+    document.getElementById("Withdrawal").value = Withdrawal;
+    document.getElementById("userKey").value =userKey;
+
+}
+
+//Qを表示
+function insertDataRight(Para) {
+
+    var div = document.querySelector('#bms_messages');
+
+    var bms_message_text = document.createElement('div');
+    bms_message_text.className = 'bms_message_text';
+    bms_message_text.innerText = Para;
+
+
+    var bms_message_content = document.createElement('div');
+    bms_message_content.className = 'bms_message_content';
+    bms_message_content.appendChild(bms_message_text);
+
+    var bms_message_box = document.createElement('div');
+    bms_message_box.className = 'bms_message_box';
+    bms_message_box.appendChild(bms_message_content);
+
+    var bms_message_bms_right = document.createElement('div');
+    bms_message_bms_right.className = 'bms_message bms_right';
+    bms_message_bms_right.appendChild(bms_message_box);
+
+    div.appendChild(bms_message_bms_right);
+
+}
+
+//Aを表示
+function insertDataLeft(Response, URL, Para) {
+
+    var div = document.querySelector('#bms_messages');
+    var hotText = Response;
+    var URL = URL;
+
+    var bms_message_text = document.createElement('div');
+    bms_message_text.className = 'bms_message_text';
+    if (URL == undefined) {
+
+        bms_message_text.innerHTML = hotText;
+    }
+    else if(URL ==''){
+        bms_message_text.innerHTML = hotText;
+    }
+    else {
+        bms_message_text.innerHTML = hotText.link(URL);
+    }
+
+    var bms_message_content = document.createElement('div');
+    bms_message_content.className = 'bms_message_content';
+    bms_message_content.appendChild(bms_message_text);
+
+    var bms_message_box = document.createElement('div');
+    bms_message_box.className = 'bms_message_box';
+    bms_message_box.appendChild(bms_message_content);
+
+    var bms_message_bms_left = document.createElement('div');
+    bms_message_bms_left.className = 'bms_message bms_left';
+    bms_message_bms_left.appendChild(bms_message_box);
+
+    div.appendChild(bms_message_bms_left);
+    scroll();
+
+}
+
+//入力されたメッセージを表示
+function addReturnMessage() {
+    var messeagePara = document.getElementById("message").value;
+    insertDataRight(messeagePara);
+    return messeagePara;
+}
+
+//ロジックを用いて表示
+function addMessage() {
+    var idPara = 0;
+    var ReturnNum = 0;
+    for (var i in jsonGet) {
+        if(idPara!=0){
+            //console.log('kokoidPara:'+idPara)
+            break;
+        }
+        idPara = MakeReturn(i)
+        if(idPara!=0){
+             //console.log('ReturnNum:'+ReturnNum)
+             ReturnNum=idPara
+        }
+    }
+//    console.log('jsonGet[ReturnNum][Q1]'+jsonGet[ReturnNum].Q1)
+
+    if (ReturnNum == 0) {
+        insertDataLeft(jsonGet[0].Answer, jsonGet[0].URL)
+    }
+  //  console.log('ReturnNum下:'+ReturnNum)
+    return ReturnNum
+}
+
+
+//ボタンを押下時に実行
+function Execute() {
+    var huga = 0;
+
+    var para = addReturnMessage()
+
+    var hoge = setInterval(
+        function () {
+
+            NextAnswerId = addMessage();
+              if(jsonGet[NextAnswerId].Q1=='')
+              {
+                //ReturnがなにもなければNextAnswerIdを0にする（ストーリーの処理ではない）
+                NextAnswerId=0;
+    //            console.log('yesuuuuuuuuuu')
+      //          console.log('NextAnswerId:'+NextAnswerId)
+              }
+
+        //    console.log('123456789NextAnswerId:'+NextAnswerId)
+            scroll()
+            huga++;
+            //終了条件
+            if (huga == 1) {
+                clearInterval(hoge);
+                document.getElementById("message").value = "";
+            }
+        }
+        , 1000);
+    scroll();
+    console.log('End')
+
+
+}
+
+//×ボタン押下時の処理
+function Delete() {
+    var element = document.getElementById("bms_messages");
+
+    while (element.firstChild) {
+        element.removeChild(element.firstChild);
+    }
+    insertDataLeft('何かお手伝い致しましょうか?');
+}
+
+
+function MakeReturn(id) {
+    var Para = document.getElementById("message").value;
+    var Returnid = 0;
+    //console.log('NextAnswerId:' + NextAnswerId+'Para:'+Para)
+
+    if (NextAnswerId != 0) {
+      //  console.log('対話')
+      //  console.log('jsonGet[NextAnswerId][\'question\']:' + jsonGet[NextAnswerId]['question']['Q1'])
+        if (jsonGet[NextAnswerId].Q1 != '') {
+            if (Para.match(jsonGet[NextAnswerId].Q1)) {
+        //        console.log('A1')
+                insertDataLeft('こちらでいかがでしょうか',);
+                //console.log('jsonGet[NextAnswerId][question][A1]:'+jsonGet[NextAnswerId]['NextAnswerNo']['A1'])
+                var NextNo=jsonGet[NextAnswerId].A1;
+          //      console.log('NextNo:'+NextNo)
+                response = jsonGet[NextNo].Answer;
+                URL = jsonGet[NextNo].URL;
+                insertDataLeft(response, URL);
+                Returnid = jsonGet[NextNo].IdPerUser;
+            }
+        }
+        if (jsonGet[NextAnswerId].Q2 != '') {
+            if (Para.match(jsonGet[NextAnswerId].Q2)) {
+            //    console.log('A2')
+                insertDataLeft('こちらでいかがでしょうか',);
+                var NextNo=jsonGet[NextAnswerId].A2;
+                response = jsonGet[NextNo].Answer;
+                URL = jsonGet[NextNo].URL;
+                insertDataLeft(response, URL);
+                Returnid = jsonGet[NextNo].IdPerUser;
+            }
+        }
+         if (jsonGet[NextAnswerId]['Q3'] != '') {
+            if (Para.match(jsonGet[NextAnswerId].Q3)) {
+              //  console.log('A3')
+                insertDataLeft('こちらでいかがでしょうか',);
+                var NextNo=jsonGet[NextAnswerId].A3;
+                //console.log('NextNo:'+NextNo)
+
+                //console.log('6NextAnswerId:' +jsonGet[6].Answer)
+                //console.log('６６NextNo:'+NextNo)
+                response = jsonGet[NextNo].Answer;
+                URL = jsonGet[NextNo].URL;
+                insertDataLeft(response, URL);
+                Returnid = jsonGet[NextNo].IdPerUser;
+            }
+        }
+         if (jsonGet[NextAnswerId]['Q4'] != '') {
+            if (Para.match(jsonGet[NextAnswerId].Q4)) {
+                //console.log('A4')
+                insertDataLeft('こちらでいかがでしょうか',);
+                //console.log('NextAnswerId:'+NextAnswerId)
+
+
+                var NextNo=jsonGet[NextAnswerId].A4;
+
+                //console.log('NextNo:'+NextNo)
+                //console.log('jsonGet[NextNo].Answer'+jsonGet[3].Answer)
+                response = jsonGet[NextNo].Answer;
+                URL = jsonGet[NextNo].URL;
+                insertDataLeft(response, URL);
+                Returnid = jsonGet[NextNo].IdPerUser;
+            }
+        }
+         if (jsonGet[NextAnswerId]['Q5'] != '') {
+            if (Para.match(jsonGet[NextAnswerId].Q5)) {
+                //console.log('A5')
+                insertDataLeft('こちらでいかがでしょうか',);
+               var NextNo=jsonGet[NextAnswerId].A5;
+               response = jsonGet[NextNo].Answer;
+                URL = jsonGet[NextNo].URL;
+                insertDataLeft(response, URL);
+                Returnid = jsonGet[NextNo].IdPerUser;
+            }
+        }
+
+    }
+    else {
+        //console.log('単発')
+        //console.log('jsonGet[id]:'+jsonGet[0].Answer)
+        if (jsonGet[id].Keyword != '') {
+            if (Para.match(jsonGet[id].Keyword)) {
+                insertDataLeft('こちらでいかがでしょうか',);
+                response = jsonGet[id].Answer;
+
+                URL = jsonGet[id].URL;
+                insertDataLeft(response, URL);
+                Returnid = jsonGet[id].IdPerUser;
+
+            }
+            else {
+
+            }
+          //  console.log('111111Returnid:'+Returnid)
+        if(jsonGet[Returnid].Q1==undefined)
+        {
+            NextAnswerId=0;
+            //console.log('yes')
+            //console.log('0000000NextAnswerId:'+NextAnswerId)
+        }
+        }
+    }
+    return Returnid
+}
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
+var superHeroes = request.response;
+request.onload = function() {
+    jsonGet = request.response;
+    // console.log('lastjsonGet6:'+jsonGet[6].Answer)
+    //console.log('lastjsonGet3:'+jsonGet[3].Answer)
+}
+</script>
+
 <body>
+
 <button id="buttom" class="icon" onclick="fadeOut();fadeIn(document.querySelector('.chat'), 1000);"></button>
+<div>
 
+</div>
 
-<div class="chat" id="chat">
+<div class="chat" id="chat" >
     <base target="_blank">
     <div class="chat-header">
         <div class="chat-header-icon" style="padding-top: 10px">
@@ -82,26 +458,27 @@
 
     <div class="chat-footer">
         <div class="chat-footer-contet">
-            <form action="http://127.0.0.1:8000/" method="post" target="iframe">
+            <form action="http://tfchat.work/index/" method="post" target="iframe">
                                 {% csrf_token %}
 
             <table>
                 <tr>
                     <th>
-                        <textarea class="message-form" id="message" name="kanso" rows="1" cols="29"
+                        <textarea class="message-form" id="message" name="kanso" rows="1" cols="23"
                                   placeholder="Type your message" autofocus></textarea>
                     </th>
                     <th>
                         <div style="width:30px;">
-                                <input id='userId' type="hidden" name="userId" value="">
+                                <input id='userId' type="hidden" name="userId" value=>
                                 <input id='Question' type="hidden" name="Question" value="">
                                 <input id='AnswerNo' type="hidden" name="AnswerNo" value="">
                                 <input id='Answer' type="hidden" name="Answer" value="">
                                 <input id='Withdrawal' type="hidden" name="Withdrawal" value="">
+                                <input id='userKey' type="hidden" name="userKey" value="">
 
                                 <button type="submit" class="buttom"
                                         onclick="
-                                        postForm('user','False');
+                                        postForm('{{request.session.user }}','False');
                                         Execute();" >
 
                                     <i class="far fa-comments" style="font-size:14px;"></i>

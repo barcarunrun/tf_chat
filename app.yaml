@@ -1,0 +1,30 @@
+entrypoint: python manage.py runserver
+
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+
+libraries:
+- name: MySQLdb
+  version: 1.2.5
+
+
+
+
+skip_files:
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*/RCS/.*$
+- ^(.*/)?\..*$
+- ^env/.*$
+
+
+
+handlers:
+- url: /static
+  static_dir: static
+- url: .*
+  script: TF_Chat.wsgi.application
+

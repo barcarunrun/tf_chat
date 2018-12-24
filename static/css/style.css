@@ -14,7 +14,7 @@
                  right: 20px;                  /* 位置(左0px) */
                  width: 280px;                /* 横幅100%　*/
                  height: 500px;
-                 z-index: 3;
+                 z-index: 100;
                  border-radius: 10px;
                  border-color: black;
                  border-style: solid;
@@ -145,17 +145,18 @@
     }
 
     .icon{
-    	border:none;
+        border:none;
     	background: #aa008c;
     	width:60px;
     	height:60px;
     	border-radius: 30px;
     	position: fixed;
-    	bottom: 80px;                /* 位置(下0px) */
-        right: 100px;                  /* 位置(左0px) */
+    	bottom:100px ;                /* 位置(下0px) */
+        left: 85%;                  /* 位置(左0px) */
         text-align: center;
         background-image: url(https://cdn.channel.io/plugin/images/plugin-bubble-icon-white.png);
         background-size: cover;
+
 
 
     }

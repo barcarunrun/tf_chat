@@ -14,8 +14,7 @@ import os
 #import pymysql
 #from django.utils import timezone
 
-STATIC_ROOT= 'chat/static'
-AUTH_USER_MODEL = 'chat.AuthUser'
+STATIC_ROOT = 'chat/static'
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -48,7 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-   # 'rest_framework',
+    # 'rest_framework',
     'widget_tweaks',
     # 'django_filters',
     'chat.apps.ChatConfig',
@@ -64,19 +63,18 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-  #  'chat.middleware.TimezoneMiddleware',
+    #  'chat.middleware.TimezoneMiddleware',
 
 ]
 
-#pymysql.install_as_MySQLdb()
+# pymysql.install_as_MySQLdb()
 
 ROOT_URLCONF = 'TF_Chat.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -94,14 +92,6 @@ WSGI_APPLICATION = 'TF_Chat.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
-#DATABASES = {
-#   'default': {
-#       'ENGINE': 'django.db.backends.sqlite3',
-#       'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#   }
-#}
-
 
 
 # [START db_setup]
@@ -127,7 +117,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'HOST': 'localhost',
+            'HOST': '35.234.29.220',
             'PORT': '3306',
             'NAME': 'tfchat',
             'USER': 'admin',
@@ -135,6 +125,12 @@ else:
         }
     }
 # [END db_setup]
+# DATABASES = {
+#   'default': {
+#       'ENGINE': 'django.db.backends.sqlite3',
+#       'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#   }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -158,7 +154,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'ja'
+LANGUAGE_CODE = 'en'
+# LANGUAGE_CODE = 'ja'
 
 TIME_ZONE = 'Asia/Tokyo'
 
@@ -172,7 +169,7 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL="/chat/static/"
+STATIC_URL = "/static/"
 
 STATICFILES_DIRS = (
     #os.path.join(BASE_DIR, "static"),
@@ -180,13 +177,10 @@ STATICFILES_DIRS = (
 )
 
 
-
-
-SESSION_ENGINE ='django.contrib.sessions.backends.cache'
+SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
 
 LOGIN_REDIRECT_URL = '/top'
 LOGOUT_REDIRECT_URL = '/login/'
-
 
 
 REST_FRAMEWORK = {
@@ -196,3 +190,5 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+
+AUTH_USER_MODEL = 'chat.AuthUser'

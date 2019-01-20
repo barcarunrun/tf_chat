@@ -7,13 +7,15 @@ from django.db import models
 from datetime import datetime
 from django.utils import timezone
 
+# from django.contrib.auth import get_user_model
+# User = get_user_model()
 # Create your models here.
+
 
 class AuthUserManager(BaseUserManager):
     def create_user(self, username, password):
         """
         ユーザ作成
-
         :param userId: ユーザID
         :param password: パスワード
         :return: AuthUserオブジェクト
@@ -26,7 +28,7 @@ class AuthUserManager(BaseUserManager):
                           )
         user.adminFlag = False
 
-        user.set_password(password)
+        # user.set_password(password)
         user.set_password(password)
         user.save(using=self._db)
         return user
@@ -44,9 +46,11 @@ class AuthUserManager(BaseUserManager):
                                 )
         user.is_superuser = True
         user.LoginTimes = datetime.now()
+        user.set_password(password)
         user.adminFlag = True
         user.save(using=self._db)
         return user
+
 
 class AuthUser(AbstractBaseUser, PermissionsMixin):
     """
@@ -62,33 +66,42 @@ class AuthUser(AbstractBaseUser, PermissionsMixin):
 
     adminFlag = models.BooleanField(verbose_name='管理者フラグ',
                                     default=False)
-    #LoginTimes=models.BigIntegerField()
+    # LoginTimes=models.BigIntegerField()
     recent_login_date = models.DateTimeField(auto_now_add=True)
     USERNAME_FIELD = 'username'
+    author = models.CharField(max_length=200, blank=True, null=True)
+    userpassword = models.CharField(max_length=200, blank=True, null=True)
     objects = AuthUserManager()
 
     def __str__(self):
         return self.username
 
+
 class Log(models.Model):
     userId = models.CharField(max_length=30)
     DateTime = models.DateTimeField(auto_now_add=True)
-    Question=models.CharField(max_length = 200)
+    Question = models.CharField(max_length=200)
     AnswerNo = models.BigIntegerField()
     Answer = models.CharField(max_length=200)
-    Withdrawal=models.BooleanField(default=False)
+    Withdrawal = models.BooleanField(default=False)
 
+
+CHOICE = {
+    (False, 'テスト'),
+    (True, '公開')
+}
 
 
 class QA(models.Model):
-    Keyword = models.CharField(max_length=100,blank=True, null=True)
+    is_public = models.BooleanField(choices=CHOICE, default=False)
+    Keyword = models.CharField(max_length=100, blank=True, null=True)
     Answer = models.CharField(max_length=200)
-    URL=models.URLField(max_length=300)
+    URL = models.URLField(max_length=300)
     #NextAnswerNo = models.BigIntegerField()
     #Question = models.CharField(max_length=200)
     userId = models.CharField(verbose_name='ユーザID',
-                                unique=False,
-                                max_length=30)
+                              unique=False,
+                              max_length=30)
     Q1 = models.CharField(max_length=10, blank=True, null=True)
     Q2 = models.CharField(max_length=10, blank=True, null=True)
     Q3 = models.CharField(max_length=10, blank=True, null=True)
@@ -99,5 +112,5 @@ class QA(models.Model):
     A3 = models.CharField(max_length=10, blank=True, null=True)
     A4 = models.CharField(max_length=10, blank=True, null=True)
     A5 = models.CharField(max_length=10, blank=True, null=True)
-    IdPerUser=models.IntegerField()
-    userKey=models.CharField(max_length=100)
+    IdPerUser = models.IntegerField()
+    userKey = models.CharField(max_length=100)

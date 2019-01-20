@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse,HttpResponseRedirect
 from django.template.context_processors import csrf
 from django.conf import settings
-from models import Log, QA
+from chat.models import Log, QA
 import sys, os
 import base64
 import logging
@@ -17,7 +17,7 @@ import uuid, tempfile
 import json
 from collections import OrderedDict
 from django.shortcuts import  redirect,render
-import forms
+import chat.forms
 from django.views.generic import ListView
 from .forms import create,ItemForm
 from django.views.decorators.clickjacking import xframe_options_exempt
@@ -29,7 +29,10 @@ import django.http
 import chat.models
 import chat.forms
 import uuid
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
+
+# from django.contrib.auth import get_user_model
+# User = get_user_model()
 import re
 from django.contrib.auth import authenticate, login as django_login
 # coding: utf-8
@@ -48,9 +51,8 @@ logging.getLogger().setLevel(logging.DEBUG)
 
 
 
-
-
 from django.utils import six
+from django.contrib.admin.views.decorators import staff_member_required
 
 # Create your views here.
 
@@ -169,6 +171,7 @@ def topPage(request):
     print('top' +request.session['user'])
     return render(request, 'TopPage.html')
 
+from distutils.util import strtobool
 def qa(request):
     print('qa'+request.session['user'])
     userPara=request.session['user']
@@ -177,6 +180,20 @@ def qa(request):
         formset = create(userPara)
         #print('qa1234' + str(request.user))
         return render(request, 'QA.html', {'formset': formset,})
+
+    if 'all_public' in request.POST:
+        print('make all public')
+        for qa in QA.objects.filter(userId=userPara):
+            qa.is_public = True
+            qa.save()
+        return redirect(to='/qa')
+    
+    if 'all_test' in request.POST:
+        print('make all test')
+        for qa in QA.objects.filter(userId=userPara):
+            qa.is_public = False
+            qa.save()
+        return redirect(to='/qa')
 
 
     insertNum = int(request.POST['buttom'])   # formは０からはじまるため
@@ -194,6 +211,7 @@ def qa(request):
                          Answer =request.POST['form-'+str(insertNum)+'-Answer'],
                          URL=request.POST['form-'+str(insertNum)+'-URL'],
                          userId=userPara,
+                         is_public=bool(strtobool(request.POST['form-'+str(insertNum) + '-is_public'])),
                          Q1 =request.POST['form-'+str(insertNum)+'-Q1'],
                          Q2 =request.POST['form-'+str(insertNum)+'-Q2'],
                          Q3 =request.POST['form-'+str(insertNum)+'-Q3'],
@@ -210,10 +228,16 @@ def qa(request):
         insert_data.save()
     else :
        # print ('hugahuga')
+        print(request.POST['form-'+str(insertNum) + '-is_public'])
+        print(bool(strtobool(request.POST['form-'+str(insertNum) + '-is_public'])))
         serachObj = QA.objects.get(id=str(serachNum))
         serachObj.Keyword = request.POST['form-'+str(insertNum)+'-Keyword']
         serachObj.Answer = request.POST['form-' + str(insertNum) + '-Answer']
         serachObj.URL = request.POST['form-' + str(insertNum) + '-URL']
+        if bool(strtobool(request.POST['form-' + str(insertNum) + '-is_public'])):
+            serachObj.is_public = True
+        else:
+            serachObj.is_public = False
         serachObj.Q1 = request.POST['form-' + str(insertNum) + '-Q1']
         serachObj.Q2 = request.POST['form-' + str(insertNum) + '-Q2']
         serachObj.Q3 = request.POST['form-' + str(insertNum) + '-Q3']
@@ -228,13 +252,28 @@ def qa(request):
 
     num = 30 - QA.objects.filter(userId=userPara).count()
     formset = create(userPara)
-    return HttpResponseRedirect(request,"/qa/#"+unicode(insertNum), {'formset': formset })
+    return redirect(to='/qa')
+    # return HttpResponseRedirect(request,"/qa/#"+unicode(insertNum), {'formset': formset })
     #return render(request, 'QA.html', {'formset': formset ,'data':insertNum})
 
+# @staff_member_required
 def setting(request):
     print('setting' + request.session['user'])
     key=QA.objects.filter(userId=request.session['user']).first().userKey
     return render(request, 'Setting.html',{'key': key})
+
+def userlist(request):
+    userPara=request.session['user']
+    if request.method == 'POST':
+        form = chat.forms.SignUpForm(request.POST)
+        if form.is_valid():
+            form.author = userPara
+            form.save()
+            # login(request, user)
+            return redirect(to='/userlist')
+    form = chat.forms.SignUpForm()
+    # users = User.objects.get(userId=userPara)
+    return render(request,'Userlist.html', {'form': form})
 
 
 def test(request):
@@ -248,7 +287,7 @@ def api(request):
         param_value = request.GET.get("userKey")
         print("param_value:"+param_value)
         qas=[]
-        for qa in QA.objects.filter(userKey=param_value).order_by('IdPerUser'):
+        for qa in QA.objects.filter(userKey=param_value,is_public='1').order_by('IdPerUser'):
             reply = qa.Answer
             if qa.Q1 != '':
                 reply = reply + '<br>' + '1.' + qa.Q1
@@ -447,3 +486,57 @@ def apiFourfusion(request):
     #serializer_class = QASerializer
     #filter_backends = (DjangoFilterBackend,)
 #filter_fields = ('userKey','userId')
+
+def apitest(request):
+
+    if "userKey" in request.GET:
+        # query_paramが指定されている場合の処理
+        param_value = request.GET.get("userKey")
+        print("param_value:"+param_value)
+        qas=[]
+        for qa in QA.objects.filter(userKey=param_value).order_by('IdPerUser'):
+            reply = qa.Answer
+            if qa.Q1 != '':
+                reply = reply + '<br>' + '1.' + qa.Q1
+            if qa.Q2 != '':
+                reply = reply + '<br>' + '2.' + qa.Q2
+            if qa.Q3 != '':
+                reply = reply + '<br>' + '3.' + qa.Q3
+            if qa.Q4 != '':
+                reply = reply + '<br>' + '4.' + qa.Q4
+            if qa.Q5 != '':
+                reply = reply + '<br>' + '5.' + qa.Q5
+            qa_dict = OrderedDict([
+                ('IdPerUser', qa.IdPerUser),
+                ('Keyword', qa.Keyword),
+                ('Answer', reply),
+                ('URL', qa.URL),
+                ('userId', qa.userId),
+                ('Q1', qa.Q1),
+                ('Q2', qa.Q2),
+                ('Q3', qa.Q3),
+                ('Q4', qa.Q4),
+                ('Q5', qa.Q5),
+                ('A1', qa.A1),
+                ('A2', qa.A2),
+                ('A3', qa.A3),
+                ('A4', qa.A4),
+                ('A5', qa.A5),
+
+            ])
+
+            qas.append(qa_dict)
+
+        data = qas
+        json_str = json.dumps(data, ensure_ascii=False)
+
+        response = HttpResponse(json_str, content_type='application/javascript; charset=UTF-8',status=None)
+        print(response)
+        return response
+
+    else:
+       # print("else")
+        data = {'error':'error1234'}
+        json_str = json.dumps(data, ensure_ascii=False, indent=2)
+        response = HttpResponse(json_str, content_type='application/javascript; charset=UTF-8', status=None)
+        return response

@@ -84,6 +84,7 @@ class Log(models.Model):
     AnswerNo = models.BigIntegerField()
     Answer = models.CharField(max_length=200)
     Withdrawal = models.BooleanField(default=False)
+    ScreenId=models.CharField(max_length=100)
 
 
 CHOICE = {
@@ -114,3 +115,8 @@ class QA(models.Model):
     A5 = models.CharField(max_length=10, blank=True, null=True)
     IdPerUser = models.IntegerField()
     userKey = models.CharField(max_length=100)
+
+class AdminFlag(models.Model):
+    userId = models.CharField(max_length=30)
+    userKey = models.CharField(max_length=100)
+    adminUser = models.CharField(max_length=30)

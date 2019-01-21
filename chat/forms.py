@@ -9,7 +9,6 @@ from django.core.cache import cache
 # ItemFormSet =forms.modelformset_factory(QA, extra=1)
 from django.contrib.auth.forms import UserCreationForm
 
-# ユーザ作成フォームを継承
 
 
 class SignUpForm(UserCreationForm):
@@ -34,11 +33,11 @@ class ItemForm(forms.ModelForm):
         fields = '__all__'
 
 
-num = 30-QA.objects.filter(userId='user').count()
-# num=0
+
 
 
 def create(user):
+    num = 100 - QA.objects.filter(userId=user).count()
     ItemFormSet2 = formsets.formset_factory(ItemForm, extra=num, formset=models.BaseModelFormSet)(
         queryset=QA.objects.filter(userId=user))
     ItemFormSet2.model = QA

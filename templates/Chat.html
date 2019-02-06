@@ -31,11 +31,14 @@
 	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 
 
 <script>
     var a='{{ request.session.userKey }}';
+    var b='{{ request.session.user }}';
+   
 
     try{
     var userKey=getUserKey();
@@ -52,12 +55,29 @@
     else
     {
     }
-    var requestURL = 'http://tfchat.work/api/?userKey='+userKey;
+    // var requestURL = 'http://tfchat.work/api/?userKey='+userKey;    
+    // 
+    var requestURL = 'http://127.0.0.1:8000/api/?userKey='+userKey;    
+    
+    
 
     var now = new Date();
     var NextAnswerId = 0;
     window.sessionStorage.setItem(['useKey'],[userKey]);
     var a = window.sessionStorage.getItem(['useKey']);
+    var request = new XMLHttpRequest();
+
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
+var superHeroes = request.response;
+request.onload = function() {
+     jsonGet = request.response;
+    // console.log(request.response)
+     
+    //console.log('lastjsonGet3:'+jsonGet[3].Answer)
+}
+
 
 //フェードの処理
 function fadeIn() {
@@ -169,26 +189,75 @@ function insertDataRight(Para) {
 
 }
 
+
+
+
 //Aを表示
 function insertDataLeft(Response, URL, Para) {
 
     var div = document.querySelector('#bms_messages');
+
     var hotText = Response;
     var URL = URL;
 
     var bms_message_text = document.createElement('div');
     bms_message_text.className = 'bms_message_text';
-    if (URL == undefined) {
+       
+    bms_message_text.innerHTML="";
+    if(hotText.indexOf('[option]') != -1){
+            var textArray = hotText.split(/\r\n|\r|\n/);
+            
+            for(let i = 0; i < textArray.length; i++)
+            {
+                textArray[i] = textArray[i].replace( '[option]' , '' ) ;
+                
+            }
 
-        bms_message_text.innerHTML = hotText;
+            bms_message_text.innerHTML=bms_message_text.innerHTML+textArray[0];
+            if(textArray[1]!=null)
+            {
+                para = textArray[1].replace( '1.' , '' ) ;
+            bms_message_text.innerHTML=bms_message_text.innerHTML+"<br>"+textArray[1]
+            +"<input type='radio' name='sample' onclick='func("+"&quot;"+para+"&quot;"+")'>";
+            }
+            if(textArray[2]!=null)
+            {   para = textArray[2].replace( '2.' , '' ) ;
+            bms_message_text.innerHTML=bms_message_text.innerHTML+"<br>"+textArray[2]
+            +"<input type='radio' name='sample' onclick='func("+"&quot;"+para+"&quot;"+")'>";
+            }
+            if(textArray[3]!=null)
+            {   para = textArray[3].replace( '3.' , '' ) ;
+            bms_message_text.innerHTML=bms_message_text.innerHTML+"<br>"+textArray[3]
+            +"<input type='radio' name='sample' onclick='func("+"&quot;"+para+"&quot;"+")'>";
+            }
+            if(textArray[4]!=null)
+            {   para = textArray[4].replace( '4.' , '' ) ;
+            bms_message_text.innerHTML=bms_message_text.innerHTML+"<br>"+textArray[4]
+            +"<input type='radio' name='sample' onclick='func("+"&quot;"+para+"&quot;"+")'>";
+            }
+            if(textArray[5]!=null)
+            {   para = textArray[5].replace( '5.' , '' ) ;
+            bms_message_text.innerHTML=bms_message_text.innerHTML+"<br>"+textArray[5]
+            +"<input type='radio' name='sample' onclick='func("+"&quot;"+para+"&quot;"+")'>";
+            }
+        }
+    else
+    {
+            if (URL == undefined) {
+            bms_message_text.innerHTML = hotText;
+            }
+            else if(URL ==''){
+                bms_message_text.innerHTML = hotText;
+            }
+            else {
+                bms_message_text.innerHTML = hotText.link(URL);
+            }
     }
-    else if(URL ==''){
-        bms_message_text.innerHTML = hotText;
-    }
-    else {
-        bms_message_text.innerHTML = hotText.link(URL);
-    }
+       
+       
+    
 
+   
     var bms_message_content = document.createElement('div');
     bms_message_content.className = 'bms_message_content';
     bms_message_content.appendChild(bms_message_text);
@@ -205,6 +274,20 @@ function insertDataLeft(Response, URL, Para) {
     scroll();
 
 }
+
+
+function setResponse(Response) {
+     
+     return Response
+}
+
+function func(para) {
+     var x = document.f.elements['kanso'];
+     // var para="本社";
+
+     x.value = para;
+}
+
 
 //入力されたメッセージを表示
 function addReturnMessage() {
@@ -267,7 +350,7 @@ function Execute() {
         }
         , 1000);
     scroll();
-    console.log('End')
+    
 
 
 }
@@ -387,17 +470,10 @@ function MakeReturn(id) {
     }
     return Returnid
 }
-var request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
-var superHeroes = request.response;
-request.onload = function() {
-    jsonGet = request.response;
-    // console.log('lastjsonGet6:'+jsonGet[6].Answer)
-    //console.log('lastjsonGet3:'+jsonGet[3].Answer)
-}
+
 </script>
+
+
 
 <body>
 
@@ -458,7 +534,7 @@ request.onload = function() {
 
     <div class="chat-footer">
         <div class="chat-footer-contet">
-            <form action="http://tfchat.work/index/" method="post" target="iframe">
+            <form action="http://127.0.0.1:8000/index/" method="post" target="iframe" name="f">
                                 {% csrf_token %}
 
             <table>

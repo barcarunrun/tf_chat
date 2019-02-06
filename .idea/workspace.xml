@@ -2,18 +2,930 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18ef8d25-9041-4586-aeb7-ca8915928d80" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TF_Chat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TF_Chat.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Introduce.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/manual.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/282a841f-e31f-4f10-9eb3-9a7e875d9e2c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/282a841f-e31f-4f10-9eb3-9a7e875d9e2c.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TF_Chat/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TF_Chat/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.105646124d06.105646124d06.5411e0f23f29.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.105646124d06.105646124d06.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.105646124d06.105646124d06.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.105646124d06.105646124d06.b123f3afcfd4.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.105646124d06.105646124d06.b123f3afcfd4.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.105646124d06.105646124d06.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.105646124d06.105646124d06.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.105646124d06.5411e0f23f29.5411e0f23f29.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.105646124d06.5411e0f23f29.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.105646124d06.5411e0f23f29.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.105646124d06.5411e0f23f29.b123f3afcfd4.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.105646124d06.5411e0f23f29.b123f3afcfd4.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.105646124d06.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.105646124d06.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.105646124d06.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.b150de03bf05.105646124d06.5411e0f23f29.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.b150de03bf05.105646124d06.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.b150de03bf05.105646124d06.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.b150de03bf05.105646124d06.b123f3afcfd4.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.b150de03bf05.105646124d06.b123f3afcfd4.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.b150de03bf05.105646124d06.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.b150de03bf05.105646124d06.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.b150de03bf05.5411e0f23f29.5411e0f23f29.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.b150de03bf05.5411e0f23f29.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.b150de03bf05.5411e0f23f29.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.b150de03bf05.5411e0f23f29.b123f3afcfd4.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.b150de03bf05.5411e0f23f29.b123f3afcfd4.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.b150de03bf05.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.b150de03bf05.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.b150de03bf05.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.31652d31b392.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.105646124d06.105646124d06.5411e0f23f29.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.105646124d06.105646124d06.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.105646124d06.105646124d06.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.105646124d06.105646124d06.b123f3afcfd4.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.105646124d06.105646124d06.b123f3afcfd4.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.105646124d06.105646124d06.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.105646124d06.105646124d06.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.105646124d06.5411e0f23f29.5411e0f23f29.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.105646124d06.5411e0f23f29.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.105646124d06.5411e0f23f29.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.105646124d06.5411e0f23f29.b123f3afcfd4.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.105646124d06.5411e0f23f29.b123f3afcfd4.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.105646124d06.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.105646124d06.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.105646124d06.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.b150de03bf05.105646124d06.5411e0f23f29.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.b150de03bf05.105646124d06.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.b150de03bf05.105646124d06.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.b150de03bf05.105646124d06.b123f3afcfd4.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.b150de03bf05.105646124d06.b123f3afcfd4.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.b150de03bf05.105646124d06.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.b150de03bf05.105646124d06.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.b150de03bf05.5411e0f23f29.5411e0f23f29.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.b150de03bf05.5411e0f23f29.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.b150de03bf05.5411e0f23f29.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.b150de03bf05.5411e0f23f29.b123f3afcfd4.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.b150de03bf05.5411e0f23f29.b123f3afcfd4.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.b150de03bf05.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.b150de03bf05.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.b150de03bf05.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.b150de03bf05.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.31652d31b392.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.105646124d06.105646124d06.5411e0f23f29.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.105646124d06.105646124d06.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.105646124d06.105646124d06.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.105646124d06.105646124d06.b123f3afcfd4.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.105646124d06.105646124d06.b123f3afcfd4.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.105646124d06.105646124d06.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.105646124d06.105646124d06.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.105646124d06.5411e0f23f29.5411e0f23f29.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.105646124d06.5411e0f23f29.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.105646124d06.5411e0f23f29.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.105646124d06.5411e0f23f29.b123f3afcfd4.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.105646124d06.5411e0f23f29.b123f3afcfd4.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.105646124d06.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.105646124d06.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.105646124d06.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.b150de03bf05.105646124d06.5411e0f23f29.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.b150de03bf05.105646124d06.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.b150de03bf05.105646124d06.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.b150de03bf05.105646124d06.b123f3afcfd4.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.b150de03bf05.105646124d06.b123f3afcfd4.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.b150de03bf05.105646124d06.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.b150de03bf05.105646124d06.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.b150de03bf05.5411e0f23f29.5411e0f23f29.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.b150de03bf05.5411e0f23f29.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.b150de03bf05.5411e0f23f29.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.b150de03bf05.5411e0f23f29.b123f3afcfd4.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.b150de03bf05.5411e0f23f29.b123f3afcfd4.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.b150de03bf05.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.b150de03bf05.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.b150de03bf05.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.31652d31b392.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.105646124d06.105646124d06.5411e0f23f29.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.105646124d06.105646124d06.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.105646124d06.105646124d06.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.105646124d06.105646124d06.b123f3afcfd4.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.105646124d06.105646124d06.b123f3afcfd4.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.105646124d06.105646124d06.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.105646124d06.105646124d06.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.105646124d06.5411e0f23f29.5411e0f23f29.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.105646124d06.5411e0f23f29.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.105646124d06.5411e0f23f29.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.105646124d06.5411e0f23f29.b123f3afcfd4.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.105646124d06.5411e0f23f29.b123f3afcfd4.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.105646124d06.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.105646124d06.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.105646124d06.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.b150de03bf05.105646124d06.5411e0f23f29.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.b150de03bf05.105646124d06.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.b150de03bf05.105646124d06.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.b150de03bf05.105646124d06.b123f3afcfd4.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.b150de03bf05.105646124d06.b123f3afcfd4.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.b150de03bf05.105646124d06.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.b150de03bf05.105646124d06.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.b150de03bf05.5411e0f23f29.5411e0f23f29.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.b150de03bf05.5411e0f23f29.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.b150de03bf05.5411e0f23f29.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.b150de03bf05.5411e0f23f29.b123f3afcfd4.a516752aef31.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.b150de03bf05.5411e0f23f29.b123f3afcfd4.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.b150de03bf05.5411e0f23f29.b123f3afcfd4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.b150de03bf05.5411e0f23f29.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.b150de03bf05.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.b150de03bf05.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.5af66c1b1797.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/changelists.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/changelists.f6dc691f8d62.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/changelists.f6dc691f8d62.f6dc691f8d62.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/changelists.f6dc691f8d62.f6dc691f8d62.f6dc691f8d62.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/changelists.f6dc691f8d62.f6dc691f8d62.f6dc691f8d62.f6dc691f8d62.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/changelists.f6dc691f8d62.f6dc691f8d62.f6dc691f8d62.f6dc691f8d62.f6dc691f8d62.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/changelists.f6dc691f8d62.f6dc691f8d62.f6dc691f8d62.f6dc691f8d62.f6dc691f8d62.f6dc691f8d62.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/dashboard.7ac78187c567.7ac78187c567.7ac78187c567.7ac78187c567.7ac78187c567.7ac78187c567.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/dashboard.7ac78187c567.7ac78187c567.7ac78187c567.7ac78187c567.7ac78187c567.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/dashboard.7ac78187c567.7ac78187c567.7ac78187c567.7ac78187c567.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/dashboard.7ac78187c567.7ac78187c567.7ac78187c567.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/dashboard.7ac78187c567.7ac78187c567.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/dashboard.7ac78187c567.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/dashboard.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.303fcca7a149.27e6d10de105.27e6d10de105.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.303fcca7a149.27e6d10de105.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.303fcca7a149.27e6d10de105.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.303fcca7a149.27e6d10de105.594841536ebf.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.303fcca7a149.27e6d10de105.594841536ebf.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.303fcca7a149.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.303fcca7a149.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.303fcca7a149.303fcca7a149.27e6d10de105.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.303fcca7a149.303fcca7a149.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.303fcca7a149.303fcca7a149.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.303fcca7a149.303fcca7a149.594841536ebf.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.303fcca7a149.303fcca7a149.594841536ebf.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.303fcca7a149.303fcca7a149.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.303fcca7a149.303fcca7a149.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.303fcca7a149.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.6b587794a97b.27e6d10de105.27e6d10de105.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.6b587794a97b.27e6d10de105.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.6b587794a97b.27e6d10de105.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.6b587794a97b.27e6d10de105.594841536ebf.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.6b587794a97b.27e6d10de105.594841536ebf.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.6b587794a97b.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.6b587794a97b.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.6b587794a97b.303fcca7a149.27e6d10de105.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.6b587794a97b.303fcca7a149.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.6b587794a97b.303fcca7a149.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.6b587794a97b.303fcca7a149.594841536ebf.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.6b587794a97b.303fcca7a149.594841536ebf.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.6b587794a97b.303fcca7a149.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.6b587794a97b.303fcca7a149.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.6b587794a97b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.494e4ec545c9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.303fcca7a149.27e6d10de105.27e6d10de105.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.303fcca7a149.27e6d10de105.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.303fcca7a149.27e6d10de105.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.303fcca7a149.27e6d10de105.594841536ebf.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.303fcca7a149.27e6d10de105.594841536ebf.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.303fcca7a149.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.303fcca7a149.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.303fcca7a149.303fcca7a149.27e6d10de105.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.303fcca7a149.303fcca7a149.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.303fcca7a149.303fcca7a149.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.303fcca7a149.303fcca7a149.594841536ebf.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.303fcca7a149.303fcca7a149.594841536ebf.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.303fcca7a149.303fcca7a149.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.303fcca7a149.303fcca7a149.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.303fcca7a149.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.6b587794a97b.27e6d10de105.27e6d10de105.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.6b587794a97b.27e6d10de105.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.6b587794a97b.27e6d10de105.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.6b587794a97b.27e6d10de105.594841536ebf.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.6b587794a97b.27e6d10de105.594841536ebf.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.6b587794a97b.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.6b587794a97b.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.6b587794a97b.303fcca7a149.27e6d10de105.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.6b587794a97b.303fcca7a149.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.6b587794a97b.303fcca7a149.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.6b587794a97b.303fcca7a149.594841536ebf.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.6b587794a97b.303fcca7a149.594841536ebf.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.6b587794a97b.303fcca7a149.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.6b587794a97b.303fcca7a149.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.6b587794a97b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.6b587794a97b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.494e4ec545c9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.303fcca7a149.27e6d10de105.27e6d10de105.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.303fcca7a149.27e6d10de105.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.303fcca7a149.27e6d10de105.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.303fcca7a149.27e6d10de105.594841536ebf.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.303fcca7a149.27e6d10de105.594841536ebf.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.303fcca7a149.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.303fcca7a149.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.303fcca7a149.303fcca7a149.27e6d10de105.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.303fcca7a149.303fcca7a149.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.303fcca7a149.303fcca7a149.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.303fcca7a149.303fcca7a149.594841536ebf.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.303fcca7a149.303fcca7a149.594841536ebf.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.303fcca7a149.303fcca7a149.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.303fcca7a149.303fcca7a149.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.303fcca7a149.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.6b587794a97b.27e6d10de105.27e6d10de105.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.6b587794a97b.27e6d10de105.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.6b587794a97b.27e6d10de105.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.6b587794a97b.27e6d10de105.594841536ebf.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.6b587794a97b.27e6d10de105.594841536ebf.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.6b587794a97b.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.6b587794a97b.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.6b587794a97b.303fcca7a149.27e6d10de105.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.6b587794a97b.303fcca7a149.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.6b587794a97b.303fcca7a149.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.6b587794a97b.303fcca7a149.594841536ebf.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.6b587794a97b.303fcca7a149.594841536ebf.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.6b587794a97b.303fcca7a149.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.6b587794a97b.303fcca7a149.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.6b587794a97b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.494e4ec545c9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.303fcca7a149.27e6d10de105.27e6d10de105.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.303fcca7a149.27e6d10de105.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.303fcca7a149.27e6d10de105.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.303fcca7a149.27e6d10de105.594841536ebf.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.303fcca7a149.27e6d10de105.594841536ebf.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.303fcca7a149.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.303fcca7a149.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.303fcca7a149.303fcca7a149.27e6d10de105.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.303fcca7a149.303fcca7a149.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.303fcca7a149.303fcca7a149.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.303fcca7a149.303fcca7a149.594841536ebf.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.303fcca7a149.303fcca7a149.594841536ebf.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.303fcca7a149.303fcca7a149.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.303fcca7a149.303fcca7a149.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.303fcca7a149.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.6b587794a97b.27e6d10de105.27e6d10de105.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.6b587794a97b.27e6d10de105.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.6b587794a97b.27e6d10de105.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.6b587794a97b.27e6d10de105.594841536ebf.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.6b587794a97b.27e6d10de105.594841536ebf.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.6b587794a97b.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.6b587794a97b.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.6b587794a97b.303fcca7a149.27e6d10de105.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.6b587794a97b.303fcca7a149.27e6d10de105.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.6b587794a97b.303fcca7a149.27e6d10de105.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.6b587794a97b.303fcca7a149.594841536ebf.2a838db22184.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.6b587794a97b.303fcca7a149.594841536ebf.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.6b587794a97b.303fcca7a149.594841536ebf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.6b587794a97b.303fcca7a149.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.6b587794a97b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.6b587794a97b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.cc6140298ba7.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/fonts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.1c79c745cbeb.1c79c745cbeb.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.1c79c745cbeb.1c79c745cbeb.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.1c79c745cbeb.1c79c745cbeb.429ed952f404.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.1c79c745cbeb.1c79c745cbeb.cbe620a97a78.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.1c79c745cbeb.1c79c745cbeb.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.1c79c745cbeb.1c79c745cbeb.cbe620a97a78.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.1c79c745cbeb.1c79c745cbeb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.1c79c745cbeb.429ed952f404.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.1c79c745cbeb.429ed952f404.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.1c79c745cbeb.429ed952f404.429ed952f404.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.1c79c745cbeb.429ed952f404.cbe620a97a78.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.1c79c745cbeb.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.1c79c745cbeb.429ed952f404.cbe620a97a78.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.1c79c745cbeb.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.1c79c745cbeb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.429ed952f404.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.cbe620a97a78.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.cbe620a97a78.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.60fb0693ff6f.429ed952f404.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.60fb0693ff6f.429ed952f404.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.60fb0693ff6f.429ed952f404.429ed952f404.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.60fb0693ff6f.429ed952f404.cbe620a97a78.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.60fb0693ff6f.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.60fb0693ff6f.429ed952f404.cbe620a97a78.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.60fb0693ff6f.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.60fb0693ff6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.15ebfebbeb3d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.1c79c745cbeb.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.1c79c745cbeb.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.1c79c745cbeb.429ed952f404.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.1c79c745cbeb.cbe620a97a78.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.1c79c745cbeb.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.1c79c745cbeb.cbe620a97a78.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.1c79c745cbeb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.429ed952f404.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.429ed952f404.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.429ed952f404.429ed952f404.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.429ed952f404.cbe620a97a78.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.429ed952f404.cbe620a97a78.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.60fb0693ff6f.1c79c745cbeb.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.60fb0693ff6f.1c79c745cbeb.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.60fb0693ff6f.1c79c745cbeb.429ed952f404.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.60fb0693ff6f.1c79c745cbeb.cbe620a97a78.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.60fb0693ff6f.1c79c745cbeb.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.60fb0693ff6f.1c79c745cbeb.cbe620a97a78.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.60fb0693ff6f.1c79c745cbeb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.60fb0693ff6f.429ed952f404.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.60fb0693ff6f.429ed952f404.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.60fb0693ff6f.429ed952f404.429ed952f404.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.60fb0693ff6f.429ed952f404.cbe620a97a78.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.60fb0693ff6f.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.60fb0693ff6f.429ed952f404.cbe620a97a78.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.60fb0693ff6f.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.60fb0693ff6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.60fb0693ff6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.15ebfebbeb3d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.1c79c745cbeb.1c79c745cbeb.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.1c79c745cbeb.1c79c745cbeb.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.1c79c745cbeb.1c79c745cbeb.429ed952f404.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.1c79c745cbeb.1c79c745cbeb.cbe620a97a78.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.1c79c745cbeb.1c79c745cbeb.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.1c79c745cbeb.1c79c745cbeb.cbe620a97a78.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.1c79c745cbeb.1c79c745cbeb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.1c79c745cbeb.429ed952f404.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.1c79c745cbeb.429ed952f404.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.1c79c745cbeb.429ed952f404.429ed952f404.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.1c79c745cbeb.429ed952f404.cbe620a97a78.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.1c79c745cbeb.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.1c79c745cbeb.429ed952f404.cbe620a97a78.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.1c79c745cbeb.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.1c79c745cbeb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.429ed952f404.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.cbe620a97a78.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.cbe620a97a78.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.60fb0693ff6f.1c79c745cbeb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.60fb0693ff6f.429ed952f404.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.60fb0693ff6f.429ed952f404.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.60fb0693ff6f.429ed952f404.429ed952f404.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.60fb0693ff6f.429ed952f404.cbe620a97a78.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.60fb0693ff6f.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.60fb0693ff6f.429ed952f404.cbe620a97a78.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.60fb0693ff6f.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.60fb0693ff6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.15ebfebbeb3d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.1c79c745cbeb.1c79c745cbeb.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.1c79c745cbeb.1c79c745cbeb.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.1c79c745cbeb.1c79c745cbeb.429ed952f404.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.1c79c745cbeb.1c79c745cbeb.cbe620a97a78.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.1c79c745cbeb.1c79c745cbeb.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.1c79c745cbeb.1c79c745cbeb.cbe620a97a78.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.1c79c745cbeb.1c79c745cbeb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.1c79c745cbeb.429ed952f404.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.1c79c745cbeb.429ed952f404.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.1c79c745cbeb.429ed952f404.429ed952f404.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.1c79c745cbeb.429ed952f404.cbe620a97a78.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.1c79c745cbeb.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.1c79c745cbeb.429ed952f404.cbe620a97a78.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.1c79c745cbeb.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.1c79c745cbeb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.60fb0693ff6f.1c79c745cbeb.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.60fb0693ff6f.1c79c745cbeb.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.60fb0693ff6f.1c79c745cbeb.429ed952f404.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.60fb0693ff6f.1c79c745cbeb.cbe620a97a78.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.60fb0693ff6f.1c79c745cbeb.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.60fb0693ff6f.1c79c745cbeb.cbe620a97a78.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.60fb0693ff6f.1c79c745cbeb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.60fb0693ff6f.429ed952f404.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.60fb0693ff6f.429ed952f404.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.60fb0693ff6f.429ed952f404.429ed952f404.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.60fb0693ff6f.429ed952f404.cbe620a97a78.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.60fb0693ff6f.429ed952f404.cbe620a97a78.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.60fb0693ff6f.429ed952f404.cbe620a97a78.e8df708434b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.60fb0693ff6f.429ed952f404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.60fb0693ff6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.60fb0693ff6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.77b3f8a70811.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/forms.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/login.a846c0e2ef65.a846c0e2ef65.a846c0e2ef65.a846c0e2ef65.a846c0e2ef65.a846c0e2ef65.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/login.a846c0e2ef65.a846c0e2ef65.a846c0e2ef65.a846c0e2ef65.a846c0e2ef65.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/login.a846c0e2ef65.a846c0e2ef65.a846c0e2ef65.a846c0e2ef65.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/login.a846c0e2ef65.a846c0e2ef65.a846c0e2ef65.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/login.a846c0e2ef65.a846c0e2ef65.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/login.a846c0e2ef65.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/rtl.4c867197b256.4c867197b256.4c867197b256.4c867197b256.4c867197b256.4c867197b256.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/rtl.4c867197b256.4c867197b256.4c867197b256.4c867197b256.4c867197b256.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/rtl.4c867197b256.4c867197b256.4c867197b256.4c867197b256.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/rtl.4c867197b256.4c867197b256.4c867197b256.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/rtl.4c867197b256.4c867197b256.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/rtl.4c867197b256.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.31a450e7f729.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.31a450e7f729.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.31a450e7f729.d92232e4f3d3.d8e1832d6e6f.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.31a450e7f729.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.31a450e7f729.d92232e4f3d3.d8e1832d6e6f.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.31a450e7f729.d92232e4f3d3.d92232e4f3d3.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.31a450e7f729.d92232e4f3d3.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.31a450e7f729.d92232e4f3d3.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.31a450e7f729.e6e148ad851d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.31a450e7f729.e6e148ad851d.d8e1832d6e6f.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.31a450e7f729.e6e148ad851d.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.31a450e7f729.e6e148ad851d.d8e1832d6e6f.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.31a450e7f729.e6e148ad851d.d92232e4f3d3.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.31a450e7f729.e6e148ad851d.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.31a450e7f729.e6e148ad851d.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.e6e148ad851d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.e6e148ad851d.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.e6e148ad851d.d92232e4f3d3.d8e1832d6e6f.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.e6e148ad851d.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.e6e148ad851d.d92232e4f3d3.d8e1832d6e6f.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.e6e148ad851d.d92232e4f3d3.d92232e4f3d3.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.e6e148ad851d.d92232e4f3d3.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.e6e148ad851d.d92232e4f3d3.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.e6e148ad851d.e6e148ad851d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.e6e148ad851d.e6e148ad851d.d8e1832d6e6f.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.e6e148ad851d.e6e148ad851d.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.e6e148ad851d.e6e148ad851d.d8e1832d6e6f.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.e6e148ad851d.e6e148ad851d.d92232e4f3d3.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.e6e148ad851d.e6e148ad851d.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.31a450e7f729.e6e148ad851d.e6e148ad851d.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.31a450e7f729.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.31a450e7f729.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.31a450e7f729.d92232e4f3d3.d8e1832d6e6f.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.31a450e7f729.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.31a450e7f729.d92232e4f3d3.d8e1832d6e6f.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.31a450e7f729.d92232e4f3d3.d92232e4f3d3.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.31a450e7f729.d92232e4f3d3.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.31a450e7f729.d92232e4f3d3.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.31a450e7f729.e6e148ad851d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.31a450e7f729.e6e148ad851d.d8e1832d6e6f.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.31a450e7f729.e6e148ad851d.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.31a450e7f729.e6e148ad851d.d8e1832d6e6f.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.31a450e7f729.e6e148ad851d.d92232e4f3d3.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.31a450e7f729.e6e148ad851d.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.31a450e7f729.e6e148ad851d.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.e6e148ad851d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.e6e148ad851d.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.e6e148ad851d.d92232e4f3d3.d8e1832d6e6f.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.e6e148ad851d.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.e6e148ad851d.d92232e4f3d3.d8e1832d6e6f.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.e6e148ad851d.d92232e4f3d3.d92232e4f3d3.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.e6e148ad851d.d92232e4f3d3.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.e6e148ad851d.d92232e4f3d3.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.e6e148ad851d.e6e148ad851d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.e6e148ad851d.e6e148ad851d.d8e1832d6e6f.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.e6e148ad851d.e6e148ad851d.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.e6e148ad851d.e6e148ad851d.d8e1832d6e6f.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.e6e148ad851d.e6e148ad851d.d92232e4f3d3.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.e6e148ad851d.e6e148ad851d.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.5e372b41c483.e6e148ad851d.e6e148ad851d.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.5e372b41c483.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.31a450e7f729.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.31a450e7f729.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.31a450e7f729.d92232e4f3d3.d8e1832d6e6f.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.31a450e7f729.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.31a450e7f729.d92232e4f3d3.d8e1832d6e6f.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.31a450e7f729.d92232e4f3d3.d92232e4f3d3.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.31a450e7f729.d92232e4f3d3.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.31a450e7f729.d92232e4f3d3.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.31a450e7f729.e6e148ad851d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.31a450e7f729.e6e148ad851d.d8e1832d6e6f.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.31a450e7f729.e6e148ad851d.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.31a450e7f729.e6e148ad851d.d8e1832d6e6f.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.31a450e7f729.e6e148ad851d.d92232e4f3d3.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.31a450e7f729.e6e148ad851d.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.31a450e7f729.e6e148ad851d.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.e6e148ad851d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.e6e148ad851d.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.e6e148ad851d.d92232e4f3d3.d8e1832d6e6f.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.e6e148ad851d.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.e6e148ad851d.d92232e4f3d3.d8e1832d6e6f.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.e6e148ad851d.d92232e4f3d3.d92232e4f3d3.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.e6e148ad851d.d92232e4f3d3.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.e6e148ad851d.d92232e4f3d3.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.e6e148ad851d.e6e148ad851d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.e6e148ad851d.e6e148ad851d.d8e1832d6e6f.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.e6e148ad851d.e6e148ad851d.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.e6e148ad851d.e6e148ad851d.d8e1832d6e6f.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.e6e148ad851d.e6e148ad851d.d92232e4f3d3.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.e6e148ad851d.e6e148ad851d.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.31a450e7f729.e6e148ad851d.e6e148ad851d.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.31a450e7f729.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.31a450e7f729.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.31a450e7f729.d92232e4f3d3.d8e1832d6e6f.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.31a450e7f729.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.31a450e7f729.d92232e4f3d3.d8e1832d6e6f.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.31a450e7f729.d92232e4f3d3.d92232e4f3d3.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.31a450e7f729.d92232e4f3d3.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.31a450e7f729.d92232e4f3d3.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.31a450e7f729.e6e148ad851d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.31a450e7f729.e6e148ad851d.d8e1832d6e6f.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.31a450e7f729.e6e148ad851d.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.31a450e7f729.e6e148ad851d.d8e1832d6e6f.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.31a450e7f729.e6e148ad851d.d92232e4f3d3.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.31a450e7f729.e6e148ad851d.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.31a450e7f729.e6e148ad851d.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.e6e148ad851d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.e6e148ad851d.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.e6e148ad851d.d92232e4f3d3.d8e1832d6e6f.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.e6e148ad851d.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.e6e148ad851d.d92232e4f3d3.d8e1832d6e6f.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.e6e148ad851d.d92232e4f3d3.d92232e4f3d3.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.e6e148ad851d.d92232e4f3d3.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.e6e148ad851d.d92232e4f3d3.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.e6e148ad851d.e6e148ad851d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.e6e148ad851d.e6e148ad851d.d8e1832d6e6f.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.e6e148ad851d.e6e148ad851d.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.e6e148ad851d.e6e148ad851d.d8e1832d6e6f.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.e6e148ad851d.e6e148ad851d.d92232e4f3d3.2b2a764f7df6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.e6e148ad851d.e6e148ad851d.d92232e4f3d3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.5e372b41c483.e6e148ad851d.e6e148ad851d.d92232e4f3d3.d8e1832d6e6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.a7251c097987.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/css/widgets.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/LICENSE.d273d63619c9.d273d63619c9.d273d63619c9.d273d63619c9.d273d63619c9.d273d63619c9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/LICENSE.d273d63619c9.d273d63619c9.d273d63619c9.d273d63619c9.d273d63619c9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/LICENSE.d273d63619c9.d273d63619c9.d273d63619c9.d273d63619c9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/LICENSE.d273d63619c9.d273d63619c9.d273d63619c9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/LICENSE.d273d63619c9.d273d63619c9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/LICENSE.d273d63619c9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/README.2c3d0bcdede2.2c3d0bcdede2.2c3d0bcdede2.2c3d0bcdede2.2c3d0bcdede2.2c3d0bcdede2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/README.2c3d0bcdede2.2c3d0bcdede2.2c3d0bcdede2.2c3d0bcdede2.2c3d0bcdede2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/README.2c3d0bcdede2.2c3d0bcdede2.2c3d0bcdede2.2c3d0bcdede2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/README.2c3d0bcdede2.2c3d0bcdede2.2c3d0bcdede2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/README.2c3d0bcdede2.2c3d0bcdede2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/README.2c3d0bcdede2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/Roboto-Bold-webfont.2ad99072841e.2ad99072841e.2ad99072841e.2ad99072841e.2ad99072841e.2ad99072841e.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/Roboto-Bold-webfont.2ad99072841e.2ad99072841e.2ad99072841e.2ad99072841e.2ad99072841e.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/Roboto-Bold-webfont.2ad99072841e.2ad99072841e.2ad99072841e.2ad99072841e.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/Roboto-Bold-webfont.2ad99072841e.2ad99072841e.2ad99072841e.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/Roboto-Bold-webfont.2ad99072841e.2ad99072841e.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/Roboto-Bold-webfont.2ad99072841e.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/Roboto-Bold-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/Roboto-Light-webfont.b446c2399bb6.b446c2399bb6.b446c2399bb6.b446c2399bb6.b446c2399bb6.b446c2399bb6.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/Roboto-Light-webfont.b446c2399bb6.b446c2399bb6.b446c2399bb6.b446c2399bb6.b446c2399bb6.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/Roboto-Light-webfont.b446c2399bb6.b446c2399bb6.b446c2399bb6.b446c2399bb6.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/Roboto-Light-webfont.b446c2399bb6.b446c2399bb6.b446c2399bb6.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/Roboto-Light-webfont.b446c2399bb6.b446c2399bb6.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/Roboto-Light-webfont.b446c2399bb6.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/Roboto-Light-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/Roboto-Regular-webfont.ec39515ae8c6.ec39515ae8c6.ec39515ae8c6.ec39515ae8c6.ec39515ae8c6.ec39515ae8c6.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/Roboto-Regular-webfont.ec39515ae8c6.ec39515ae8c6.ec39515ae8c6.ec39515ae8c6.ec39515ae8c6.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/Roboto-Regular-webfont.ec39515ae8c6.ec39515ae8c6.ec39515ae8c6.ec39515ae8c6.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/Roboto-Regular-webfont.ec39515ae8c6.ec39515ae8c6.ec39515ae8c6.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/Roboto-Regular-webfont.ec39515ae8c6.ec39515ae8c6.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/Roboto-Regular-webfont.ec39515ae8c6.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/fonts/Roboto-Regular-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/LICENSE.2c54f4e1ca1c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/LICENSE.2c54f4e1ca1c.2c54f4e1ca1c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/LICENSE.2c54f4e1ca1c.2c54f4e1ca1c.2c54f4e1ca1c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/LICENSE.2c54f4e1ca1c.2c54f4e1ca1c.2c54f4e1ca1c.2c54f4e1ca1c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/LICENSE.2c54f4e1ca1c.2c54f4e1ca1c.2c54f4e1ca1c.2c54f4e1ca1c.2c54f4e1ca1c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/LICENSE.2c54f4e1ca1c.2c54f4e1ca1c.2c54f4e1ca1c.2c54f4e1ca1c.2c54f4e1ca1c.2c54f4e1ca1c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/README.837277fa1908.837277fa1908.837277fa1908.837277fa1908.837277fa1908.837277fa1908.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/README.837277fa1908.837277fa1908.837277fa1908.837277fa1908.837277fa1908.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/README.837277fa1908.837277fa1908.837277fa1908.837277fa1908.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/README.837277fa1908.837277fa1908.837277fa1908.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/README.837277fa1908.837277fa1908.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/README.837277fa1908.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/calendar-icons.39b290681a8b.39b290681a8b.39b290681a8b.39b290681a8b.39b290681a8b.39b290681a8b.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/calendar-icons.39b290681a8b.39b290681a8b.39b290681a8b.39b290681a8b.39b290681a8b.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/calendar-icons.39b290681a8b.39b290681a8b.39b290681a8b.39b290681a8b.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/calendar-icons.39b290681a8b.39b290681a8b.39b290681a8b.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/calendar-icons.39b290681a8b.39b290681a8b.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/calendar-icons.39b290681a8b.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/calendar-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/gis/move_vertex_off.7a23bf31ef8a.7a23bf31ef8a.7a23bf31ef8a.7a23bf31ef8a.7a23bf31ef8a.7a23bf31ef8a.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/gis/move_vertex_off.7a23bf31ef8a.7a23bf31ef8a.7a23bf31ef8a.7a23bf31ef8a.7a23bf31ef8a.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/gis/move_vertex_off.7a23bf31ef8a.7a23bf31ef8a.7a23bf31ef8a.7a23bf31ef8a.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/gis/move_vertex_off.7a23bf31ef8a.7a23bf31ef8a.7a23bf31ef8a.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/gis/move_vertex_off.7a23bf31ef8a.7a23bf31ef8a.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/gis/move_vertex_off.7a23bf31ef8a.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/gis/move_vertex_off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/gis/move_vertex_on.0047eba25b67.0047eba25b67.0047eba25b67.0047eba25b67.0047eba25b67.0047eba25b67.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/gis/move_vertex_on.0047eba25b67.0047eba25b67.0047eba25b67.0047eba25b67.0047eba25b67.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/gis/move_vertex_on.0047eba25b67.0047eba25b67.0047eba25b67.0047eba25b67.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/gis/move_vertex_on.0047eba25b67.0047eba25b67.0047eba25b67.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/gis/move_vertex_on.0047eba25b67.0047eba25b67.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/gis/move_vertex_on.0047eba25b67.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/gis/move_vertex_on.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-addlink.d519b3bab011.d519b3bab011.d519b3bab011.d519b3bab011.d519b3bab011.d519b3bab011.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-addlink.d519b3bab011.d519b3bab011.d519b3bab011.d519b3bab011.d519b3bab011.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-addlink.d519b3bab011.d519b3bab011.d519b3bab011.d519b3bab011.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-addlink.d519b3bab011.d519b3bab011.d519b3bab011.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-addlink.d519b3bab011.d519b3bab011.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-addlink.d519b3bab011.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-addlink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-alert.034cc7d8a67f.034cc7d8a67f.034cc7d8a67f.034cc7d8a67f.034cc7d8a67f.034cc7d8a67f.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-alert.034cc7d8a67f.034cc7d8a67f.034cc7d8a67f.034cc7d8a67f.034cc7d8a67f.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-alert.034cc7d8a67f.034cc7d8a67f.034cc7d8a67f.034cc7d8a67f.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-alert.034cc7d8a67f.034cc7d8a67f.034cc7d8a67f.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-alert.034cc7d8a67f.034cc7d8a67f.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-alert.034cc7d8a67f.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-alert.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-calendar.ac7aea671bea.ac7aea671bea.ac7aea671bea.ac7aea671bea.ac7aea671bea.ac7aea671bea.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-calendar.ac7aea671bea.ac7aea671bea.ac7aea671bea.ac7aea671bea.ac7aea671bea.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-calendar.ac7aea671bea.ac7aea671bea.ac7aea671bea.ac7aea671bea.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-calendar.ac7aea671bea.ac7aea671bea.ac7aea671bea.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-calendar.ac7aea671bea.ac7aea671bea.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-calendar.ac7aea671bea.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-calendar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-changelink.18d2fd706348.18d2fd706348.18d2fd706348.18d2fd706348.18d2fd706348.18d2fd706348.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-changelink.18d2fd706348.18d2fd706348.18d2fd706348.18d2fd706348.18d2fd706348.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-changelink.18d2fd706348.18d2fd706348.18d2fd706348.18d2fd706348.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-changelink.18d2fd706348.18d2fd706348.18d2fd706348.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-changelink.18d2fd706348.18d2fd706348.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-changelink.18d2fd706348.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-changelink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-clock.e1d4dfac3f2b.e1d4dfac3f2b.e1d4dfac3f2b.e1d4dfac3f2b.e1d4dfac3f2b.e1d4dfac3f2b.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-clock.e1d4dfac3f2b.e1d4dfac3f2b.e1d4dfac3f2b.e1d4dfac3f2b.e1d4dfac3f2b.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-clock.e1d4dfac3f2b.e1d4dfac3f2b.e1d4dfac3f2b.e1d4dfac3f2b.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-clock.e1d4dfac3f2b.e1d4dfac3f2b.e1d4dfac3f2b.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-clock.e1d4dfac3f2b.e1d4dfac3f2b.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-clock.e1d4dfac3f2b.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-clock.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-deletelink.564ef9dc3854.564ef9dc3854.564ef9dc3854.564ef9dc3854.564ef9dc3854.564ef9dc3854.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-deletelink.564ef9dc3854.564ef9dc3854.564ef9dc3854.564ef9dc3854.564ef9dc3854.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-deletelink.564ef9dc3854.564ef9dc3854.564ef9dc3854.564ef9dc3854.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-deletelink.564ef9dc3854.564ef9dc3854.564ef9dc3854.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-deletelink.564ef9dc3854.564ef9dc3854.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-deletelink.564ef9dc3854.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-deletelink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-no.439e821418cd.439e821418cd.439e821418cd.439e821418cd.439e821418cd.439e821418cd.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-no.439e821418cd.439e821418cd.439e821418cd.439e821418cd.439e821418cd.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-no.439e821418cd.439e821418cd.439e821418cd.439e821418cd.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-no.439e821418cd.439e821418cd.439e821418cd.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-no.439e821418cd.439e821418cd.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-no.439e821418cd.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-no.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-unknown-alt.81536e128bb6.81536e128bb6.81536e128bb6.81536e128bb6.81536e128bb6.81536e128bb6.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-unknown-alt.81536e128bb6.81536e128bb6.81536e128bb6.81536e128bb6.81536e128bb6.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-unknown-alt.81536e128bb6.81536e128bb6.81536e128bb6.81536e128bb6.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-unknown-alt.81536e128bb6.81536e128bb6.81536e128bb6.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-unknown-alt.81536e128bb6.81536e128bb6.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-unknown-alt.81536e128bb6.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-unknown-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-unknown.a18cb4398978.a18cb4398978.a18cb4398978.a18cb4398978.a18cb4398978.a18cb4398978.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-unknown.a18cb4398978.a18cb4398978.a18cb4398978.a18cb4398978.a18cb4398978.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-unknown.a18cb4398978.a18cb4398978.a18cb4398978.a18cb4398978.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-unknown.a18cb4398978.a18cb4398978.a18cb4398978.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-unknown.a18cb4398978.a18cb4398978.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-unknown.a18cb4398978.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-unknown.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-yes.d2f9f035226a.d2f9f035226a.d2f9f035226a.d2f9f035226a.d2f9f035226a.d2f9f035226a.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-yes.d2f9f035226a.d2f9f035226a.d2f9f035226a.d2f9f035226a.d2f9f035226a.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-yes.d2f9f035226a.d2f9f035226a.d2f9f035226a.d2f9f035226a.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-yes.d2f9f035226a.d2f9f035226a.d2f9f035226a.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-yes.d2f9f035226a.d2f9f035226a.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-yes.d2f9f035226a.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/icon-yes.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/inline-delete.fec1b761f254.fec1b761f254.fec1b761f254.fec1b761f254.fec1b761f254.fec1b761f254.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/inline-delete.fec1b761f254.fec1b761f254.fec1b761f254.fec1b761f254.fec1b761f254.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/inline-delete.fec1b761f254.fec1b761f254.fec1b761f254.fec1b761f254.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/inline-delete.fec1b761f254.fec1b761f254.fec1b761f254.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/inline-delete.fec1b761f254.fec1b761f254.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/inline-delete.fec1b761f254.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/inline-delete.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/search.7cf54ff789c6.7cf54ff789c6.7cf54ff789c6.7cf54ff789c6.7cf54ff789c6.7cf54ff789c6.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/search.7cf54ff789c6.7cf54ff789c6.7cf54ff789c6.7cf54ff789c6.7cf54ff789c6.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/search.7cf54ff789c6.7cf54ff789c6.7cf54ff789c6.7cf54ff789c6.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/search.7cf54ff789c6.7cf54ff789c6.7cf54ff789c6.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/search.7cf54ff789c6.7cf54ff789c6.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/search.7cf54ff789c6.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/search.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/selector-icons.b4555096cea2.b4555096cea2.b4555096cea2.b4555096cea2.b4555096cea2.b4555096cea2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/selector-icons.b4555096cea2.b4555096cea2.b4555096cea2.b4555096cea2.b4555096cea2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/selector-icons.b4555096cea2.b4555096cea2.b4555096cea2.b4555096cea2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/selector-icons.b4555096cea2.b4555096cea2.b4555096cea2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/selector-icons.b4555096cea2.b4555096cea2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/selector-icons.b4555096cea2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/selector-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/sorting-icons.3a097b59f104.3a097b59f104.3a097b59f104.3a097b59f104.3a097b59f104.3a097b59f104.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/sorting-icons.3a097b59f104.3a097b59f104.3a097b59f104.3a097b59f104.3a097b59f104.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/sorting-icons.3a097b59f104.3a097b59f104.3a097b59f104.3a097b59f104.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/sorting-icons.3a097b59f104.3a097b59f104.3a097b59f104.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/sorting-icons.3a097b59f104.3a097b59f104.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/sorting-icons.3a097b59f104.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/sorting-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/tooltag-add.e59d620a9742.e59d620a9742.e59d620a9742.e59d620a9742.e59d620a9742.e59d620a9742.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/tooltag-add.e59d620a9742.e59d620a9742.e59d620a9742.e59d620a9742.e59d620a9742.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/tooltag-add.e59d620a9742.e59d620a9742.e59d620a9742.e59d620a9742.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/tooltag-add.e59d620a9742.e59d620a9742.e59d620a9742.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/tooltag-add.e59d620a9742.e59d620a9742.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/tooltag-add.e59d620a9742.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/tooltag-add.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/tooltag-arrowright.bbfb788a849e.bbfb788a849e.bbfb788a849e.bbfb788a849e.bbfb788a849e.bbfb788a849e.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/tooltag-arrowright.bbfb788a849e.bbfb788a849e.bbfb788a849e.bbfb788a849e.bbfb788a849e.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/tooltag-arrowright.bbfb788a849e.bbfb788a849e.bbfb788a849e.bbfb788a849e.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/tooltag-arrowright.bbfb788a849e.bbfb788a849e.bbfb788a849e.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/tooltag-arrowright.bbfb788a849e.bbfb788a849e.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/tooltag-arrowright.bbfb788a849e.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/img/tooltag-arrowright.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/SelectBox.b49f008d186b.b49f008d186b.b49f008d186b.b49f008d186b.b49f008d186b.b49f008d186b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/SelectBox.b49f008d186b.b49f008d186b.b49f008d186b.b49f008d186b.b49f008d186b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/SelectBox.b49f008d186b.b49f008d186b.b49f008d186b.b49f008d186b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/SelectBox.b49f008d186b.b49f008d186b.b49f008d186b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/SelectBox.b49f008d186b.b49f008d186b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/SelectBox.b49f008d186b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/SelectBox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/SelectFilter2.17009b6d4428.17009b6d4428.17009b6d4428.17009b6d4428.17009b6d4428.17009b6d4428.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/SelectFilter2.17009b6d4428.17009b6d4428.17009b6d4428.17009b6d4428.17009b6d4428.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/SelectFilter2.17009b6d4428.17009b6d4428.17009b6d4428.17009b6d4428.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/SelectFilter2.17009b6d4428.17009b6d4428.17009b6d4428.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/SelectFilter2.17009b6d4428.17009b6d4428.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/SelectFilter2.17009b6d4428.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/SelectFilter2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/actions.32861b6cbdf9.32861b6cbdf9.32861b6cbdf9.32861b6cbdf9.32861b6cbdf9.32861b6cbdf9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/actions.32861b6cbdf9.32861b6cbdf9.32861b6cbdf9.32861b6cbdf9.32861b6cbdf9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/actions.32861b6cbdf9.32861b6cbdf9.32861b6cbdf9.32861b6cbdf9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/actions.32861b6cbdf9.32861b6cbdf9.32861b6cbdf9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/actions.32861b6cbdf9.32861b6cbdf9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/actions.32861b6cbdf9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/actions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/actions.min.f51f04edab28.f51f04edab28.f51f04edab28.f51f04edab28.f51f04edab28.f51f04edab28.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/actions.min.f51f04edab28.f51f04edab28.f51f04edab28.f51f04edab28.f51f04edab28.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/actions.min.f51f04edab28.f51f04edab28.f51f04edab28.f51f04edab28.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/actions.min.f51f04edab28.f51f04edab28.f51f04edab28.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/actions.min.f51f04edab28.f51f04edab28.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/actions.min.f51f04edab28.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/actions.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.1536fb6bea1d.1536fb6bea1d.1536fb6bea1d.1536fb6bea1d.1536fb6bea1d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.1536fb6bea1d.1536fb6bea1d.1536fb6bea1d.1536fb6bea1d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.1536fb6bea1d.1536fb6bea1d.1536fb6bea1d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.1536fb6bea1d.1536fb6bea1d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.1536fb6bea1d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/admin/DateTimeShortcuts.1536fb6bea1d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/admin/DateTimeShortcuts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/admin/RelatedObjectLookups.d2bdb1018963.d2bdb1018963.d2bdb1018963.d2bdb1018963.d2bdb1018963.d2bdb1018963.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/admin/RelatedObjectLookups.d2bdb1018963.d2bdb1018963.d2bdb1018963.d2bdb1018963.d2bdb1018963.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/admin/RelatedObjectLookups.d2bdb1018963.d2bdb1018963.d2bdb1018963.d2bdb1018963.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/admin/RelatedObjectLookups.d2bdb1018963.d2bdb1018963.d2bdb1018963.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/admin/RelatedObjectLookups.d2bdb1018963.d2bdb1018963.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/admin/RelatedObjectLookups.d2bdb1018963.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/admin/RelatedObjectLookups.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/calendar.9ac94d055fbd.9ac94d055fbd.9ac94d055fbd.9ac94d055fbd.9ac94d055fbd.9ac94d055fbd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/calendar.9ac94d055fbd.9ac94d055fbd.9ac94d055fbd.9ac94d055fbd.9ac94d055fbd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/calendar.9ac94d055fbd.9ac94d055fbd.9ac94d055fbd.9ac94d055fbd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/calendar.9ac94d055fbd.9ac94d055fbd.9ac94d055fbd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/calendar.9ac94d055fbd.9ac94d055fbd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/calendar.9ac94d055fbd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/calendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/cancel.1d69cba4b4bf.1d69cba4b4bf.1d69cba4b4bf.1d69cba4b4bf.1d69cba4b4bf.1d69cba4b4bf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/cancel.1d69cba4b4bf.1d69cba4b4bf.1d69cba4b4bf.1d69cba4b4bf.1d69cba4b4bf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/cancel.1d69cba4b4bf.1d69cba4b4bf.1d69cba4b4bf.1d69cba4b4bf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/cancel.1d69cba4b4bf.1d69cba4b4bf.1d69cba4b4bf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/cancel.1d69cba4b4bf.1d69cba4b4bf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/cancel.1d69cba4b4bf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/cancel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/change_form.9e85003a1a38.9e85003a1a38.9e85003a1a38.9e85003a1a38.9e85003a1a38.9e85003a1a38.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/change_form.9e85003a1a38.9e85003a1a38.9e85003a1a38.9e85003a1a38.9e85003a1a38.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/change_form.9e85003a1a38.9e85003a1a38.9e85003a1a38.9e85003a1a38.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/change_form.9e85003a1a38.9e85003a1a38.9e85003a1a38.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/change_form.9e85003a1a38.9e85003a1a38.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/change_form.9e85003a1a38.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/change_form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/collapse.17d715df2104.17d715df2104.17d715df2104.17d715df2104.17d715df2104.17d715df2104.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/collapse.17d715df2104.17d715df2104.17d715df2104.17d715df2104.17d715df2104.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/collapse.17d715df2104.17d715df2104.17d715df2104.17d715df2104.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/collapse.17d715df2104.17d715df2104.17d715df2104.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/collapse.17d715df2104.17d715df2104.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/collapse.17d715df2104.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/collapse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/collapse.min.dc930adb2821.dc930adb2821.dc930adb2821.dc930adb2821.dc930adb2821.dc930adb2821.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/collapse.min.dc930adb2821.dc930adb2821.dc930adb2821.dc930adb2821.dc930adb2821.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/collapse.min.dc930adb2821.dc930adb2821.dc930adb2821.dc930adb2821.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/collapse.min.dc930adb2821.dc930adb2821.dc930adb2821.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/collapse.min.dc930adb2821.dc930adb2821.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/collapse.min.dc930adb2821.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/collapse.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/core.fd861d43f0f5.fd861d43f0f5.fd861d43f0f5.fd861d43f0f5.fd861d43f0f5.fd861d43f0f5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/core.fd861d43f0f5.fd861d43f0f5.fd861d43f0f5.fd861d43f0f5.fd861d43f0f5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/core.fd861d43f0f5.fd861d43f0f5.fd861d43f0f5.fd861d43f0f5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/core.fd861d43f0f5.fd861d43f0f5.fd861d43f0f5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/core.fd861d43f0f5.fd861d43f0f5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/core.fd861d43f0f5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/core.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/inlines.eda404ee376d.eda404ee376d.eda404ee376d.eda404ee376d.eda404ee376d.eda404ee376d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/inlines.eda404ee376d.eda404ee376d.eda404ee376d.eda404ee376d.eda404ee376d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/inlines.eda404ee376d.eda404ee376d.eda404ee376d.eda404ee376d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/inlines.eda404ee376d.eda404ee376d.eda404ee376d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/inlines.eda404ee376d.eda404ee376d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/inlines.eda404ee376d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/inlines.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/inlines.min.d75b9ed03975.d75b9ed03975.d75b9ed03975.d75b9ed03975.d75b9ed03975.d75b9ed03975.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/inlines.min.d75b9ed03975.d75b9ed03975.d75b9ed03975.d75b9ed03975.d75b9ed03975.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/inlines.min.d75b9ed03975.d75b9ed03975.d75b9ed03975.d75b9ed03975.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/inlines.min.d75b9ed03975.d75b9ed03975.d75b9ed03975.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/inlines.min.d75b9ed03975.d75b9ed03975.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/inlines.min.d75b9ed03975.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/inlines.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/jquery.init.95b62fa19378.95b62fa19378.95b62fa19378.95b62fa19378.95b62fa19378.95b62fa19378.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/jquery.init.95b62fa19378.95b62fa19378.95b62fa19378.95b62fa19378.95b62fa19378.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/jquery.init.95b62fa19378.95b62fa19378.95b62fa19378.95b62fa19378.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/jquery.init.95b62fa19378.95b62fa19378.95b62fa19378.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/jquery.init.95b62fa19378.95b62fa19378.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/jquery.init.95b62fa19378.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/jquery.init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/popup_response.6ce3197f8fc8.6ce3197f8fc8.6ce3197f8fc8.6ce3197f8fc8.6ce3197f8fc8.6ce3197f8fc8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/popup_response.6ce3197f8fc8.6ce3197f8fc8.6ce3197f8fc8.6ce3197f8fc8.6ce3197f8fc8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/popup_response.6ce3197f8fc8.6ce3197f8fc8.6ce3197f8fc8.6ce3197f8fc8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/popup_response.6ce3197f8fc8.6ce3197f8fc8.6ce3197f8fc8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/popup_response.6ce3197f8fc8.6ce3197f8fc8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/popup_response.6ce3197f8fc8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/popup_response.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/prepopulate.ff9208865444.ff9208865444.ff9208865444.ff9208865444.ff9208865444.ff9208865444.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/prepopulate.ff9208865444.ff9208865444.ff9208865444.ff9208865444.ff9208865444.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/prepopulate.ff9208865444.ff9208865444.ff9208865444.ff9208865444.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/prepopulate.ff9208865444.ff9208865444.ff9208865444.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/prepopulate.ff9208865444.ff9208865444.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/prepopulate.ff9208865444.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/prepopulate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/prepopulate.min.f4057ebb9b62.f4057ebb9b62.f4057ebb9b62.f4057ebb9b62.f4057ebb9b62.f4057ebb9b62.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/prepopulate.min.f4057ebb9b62.f4057ebb9b62.f4057ebb9b62.f4057ebb9b62.f4057ebb9b62.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/prepopulate.min.f4057ebb9b62.f4057ebb9b62.f4057ebb9b62.f4057ebb9b62.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/prepopulate.min.f4057ebb9b62.f4057ebb9b62.f4057ebb9b62.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/prepopulate.min.f4057ebb9b62.f4057ebb9b62.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/prepopulate.min.f4057ebb9b62.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/prepopulate.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/prepopulate_init.0d3b53c37074.0d3b53c37074.0d3b53c37074.0d3b53c37074.0d3b53c37074.0d3b53c37074.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/prepopulate_init.0d3b53c37074.0d3b53c37074.0d3b53c37074.0d3b53c37074.0d3b53c37074.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/prepopulate_init.0d3b53c37074.0d3b53c37074.0d3b53c37074.0d3b53c37074.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/prepopulate_init.0d3b53c37074.0d3b53c37074.0d3b53c37074.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/prepopulate_init.0d3b53c37074.0d3b53c37074.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/prepopulate_init.0d3b53c37074.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/prepopulate_init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/timeparse.51258861a46a.51258861a46a.51258861a46a.51258861a46a.51258861a46a.51258861a46a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/timeparse.51258861a46a.51258861a46a.51258861a46a.51258861a46a.51258861a46a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/timeparse.51258861a46a.51258861a46a.51258861a46a.51258861a46a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/timeparse.51258861a46a.51258861a46a.51258861a46a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/timeparse.51258861a46a.51258861a46a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/timeparse.51258861a46a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/timeparse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/urlify.411bc3bb651c.411bc3bb651c.411bc3bb651c.411bc3bb651c.411bc3bb651c.411bc3bb651c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/urlify.411bc3bb651c.411bc3bb651c.411bc3bb651c.411bc3bb651c.411bc3bb651c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/urlify.411bc3bb651c.411bc3bb651c.411bc3bb651c.411bc3bb651c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/urlify.411bc3bb651c.411bc3bb651c.411bc3bb651c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/urlify.411bc3bb651c.411bc3bb651c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/urlify.411bc3bb651c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/urlify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/jquery/LICENSE-JQUERY.a158210a2737.a158210a2737.a158210a2737.a158210a2737.a158210a2737.a158210a2737.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/jquery/LICENSE-JQUERY.a158210a2737.a158210a2737.a158210a2737.a158210a2737.a158210a2737.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/jquery/LICENSE-JQUERY.a158210a2737.a158210a2737.a158210a2737.a158210a2737.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/jquery/LICENSE-JQUERY.a158210a2737.a158210a2737.a158210a2737.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/jquery/LICENSE-JQUERY.a158210a2737.a158210a2737.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/jquery/LICENSE-JQUERY.a158210a2737.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/jquery/LICENSE-JQUERY.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/jquery/jquery.aacc43d6f308.aacc43d6f308.aacc43d6f308.aacc43d6f308.aacc43d6f308.aacc43d6f308.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/jquery/jquery.aacc43d6f308.aacc43d6f308.aacc43d6f308.aacc43d6f308.aacc43d6f308.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/jquery/jquery.aacc43d6f308.aacc43d6f308.aacc43d6f308.aacc43d6f308.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/jquery/jquery.aacc43d6f308.aacc43d6f308.aacc43d6f308.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/jquery/jquery.aacc43d6f308.aacc43d6f308.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/jquery/jquery.aacc43d6f308.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/jquery/jquery.min.33cabfa15c10.33cabfa15c10.33cabfa15c10.33cabfa15c10.33cabfa15c10.33cabfa15c10.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/jquery/jquery.min.33cabfa15c10.33cabfa15c10.33cabfa15c10.33cabfa15c10.33cabfa15c10.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/jquery/jquery.min.33cabfa15c10.33cabfa15c10.33cabfa15c10.33cabfa15c10.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/jquery/jquery.min.33cabfa15c10.33cabfa15c10.33cabfa15c10.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/jquery/jquery.min.33cabfa15c10.33cabfa15c10.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/jquery/jquery.min.33cabfa15c10.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/jquery/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.d64cecf4f157.d64cecf4f157.d64cecf4f157.d64cecf4f157.d64cecf4f157.d64cecf4f157.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.d64cecf4f157.d64cecf4f157.d64cecf4f157.d64cecf4f157.d64cecf4f157.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.d64cecf4f157.d64cecf4f157.d64cecf4f157.d64cecf4f157.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.d64cecf4f157.d64cecf4f157.d64cecf4f157.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.d64cecf4f157.d64cecf4f157.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.d64cecf4f157.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/xregexp/xregexp.1865b1cf5085.1865b1cf5085.1865b1cf5085.1865b1cf5085.1865b1cf5085.1865b1cf5085.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/xregexp/xregexp.1865b1cf5085.1865b1cf5085.1865b1cf5085.1865b1cf5085.1865b1cf5085.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/xregexp/xregexp.1865b1cf5085.1865b1cf5085.1865b1cf5085.1865b1cf5085.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/xregexp/xregexp.1865b1cf5085.1865b1cf5085.1865b1cf5085.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/xregexp/xregexp.1865b1cf5085.1865b1cf5085.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/xregexp/xregexp.1865b1cf5085.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/xregexp/xregexp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/xregexp/xregexp.min.c95393b8ca4d.c95393b8ca4d.c95393b8ca4d.c95393b8ca4d.c95393b8ca4d.c95393b8ca4d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/xregexp/xregexp.min.c95393b8ca4d.c95393b8ca4d.c95393b8ca4d.c95393b8ca4d.c95393b8ca4d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/xregexp/xregexp.min.c95393b8ca4d.c95393b8ca4d.c95393b8ca4d.c95393b8ca4d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/xregexp/xregexp.min.c95393b8ca4d.c95393b8ca4d.c95393b8ca4d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/xregexp/xregexp.min.c95393b8ca4d.c95393b8ca4d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/xregexp/xregexp.min.c95393b8ca4d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/admin/js/vendor/xregexp/xregexp.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/js/Key.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/js/bk/logic.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/django/contrib/auth/base_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/django/contrib/auth/base_user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/Key.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/bk/logic.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Chat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Chat.test.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Chat.test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/QA.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/QA.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Setting.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Test.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/TopPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/TopPage.html" afterDir="false" />
     </list>
@@ -63,7 +975,91 @@
         <item name="tfchat@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="tfchat: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="auth_group: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="tfchat@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tfchat: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="auth_group_permissions: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="tfchat@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tfchat: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="auth_permission: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="tfchat@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tfchat: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="chat_adminflag: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="tfchat@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tfchat: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="chat_authuser: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="tfchat@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tfchat: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="chat_authuser_groups: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="tfchat@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tfchat: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="chat_authuser_user_permissions: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="tfchat@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tfchat: schema" type="c314c289:MysqlImplModel$Schema" />
         <item name="chat_log: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="tfchat@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tfchat: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="chat_qa: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="tfchat@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tfchat: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="django_admin_log: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="tfchat@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tfchat: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="django_content_type: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="tfchat@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tfchat: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="django_migrations: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="tfchat@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tfchat: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="django_session: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -75,13 +1071,14 @@
     <session id="-1143762641">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
+          <entry key="project.closed" value="19" />
           <entry key="project.open.time.13" value="2" />
-          <entry key="project.open.time.15" value="3" />
-          <entry key="project.open.time.16" value="2" />
-          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.15" value="4" />
+          <entry key="project.open.time.16" value="3" />
+          <entry key="project.open.time.17" value="2" />
           <entry key="project.open.time.18" value="3" />
           <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.25" value="1" />
@@ -91,31 +1088,31 @@
           <entry key="project.open.time.49" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.opened" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="auth_group" value="2" />
-          <entry key="auth_group_permissions" value="1" />
+          <entry key="auth_group" value="3" />
+          <entry key="auth_group_permissions" value="2" />
           <entry key="auth_permission" value="2" />
           <entry key="auth_user" value="2" />
-          <entry key="chat_adminflag" value="1" />
-          <entry key="chat_authuser" value="7" />
+          <entry key="chat_adminflag" value="2" />
+          <entry key="chat_authuser" value="8" />
           <entry key="chat_authuser_groups" value="4" />
-          <entry key="chat_authuser_user_permissions" value="5" />
-          <entry key="chat_log" value="13" />
+          <entry key="chat_authuser_user_permissions" value="6" />
+          <entry key="chat_log" value="14" />
           <entry key="chat_nextqa" value="1" />
-          <entry key="chat_qa" value="16" />
+          <entry key="chat_qa" value="17" />
           <entry key="css" value="21" />
           <entry key="django_admin_log" value="1" />
           <entry key="django_content_type" value="1" />
           <entry key="django_migrations" value="1" />
           <entry key="django_session" value="1" />
-          <entry key="html" value="96" />
+          <entry key="html" value="102" />
           <entry key="js" value="18" />
-          <entry key="py" value="107" />
-          <entry key="sql" value="6" />
+          <entry key="py" value="115" />
+          <entry key="sql" value="7" />
           <entry key="urls" value="1" />
           <entry key="yaml" value="1" />
         </counts>
@@ -123,10 +1120,11 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="21" />
-          <entry key="Database Element" value="58" />
-          <entry key="HTML" value="96" />
+          <entry key="Database Element" value="65" />
+          <entry key="HTML" value="102" />
           <entry key="JavaScript" value="18" />
-          <entry key="Python" value="108" />
+          <entry key="Python" value="116" />
+          <entry key="SQL" value="1" />
           <entry key="Scratch" value="6" />
           <entry key="YAML" value="1" />
         </counts>
@@ -134,21 +1132,21 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="198" />
-          <entry key="HTML" value="3736" />
+          <entry key="HTML" value="3784" />
           <entry key="JavaScript" value="2035" />
           <entry key="PLAIN_TEXT" value="17" />
-          <entry key="Python" value="4756" />
-          <entry key="Scratch" value="195" />
+          <entry key="Python" value="4884" />
+          <entry key="Scratch" value="457" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cell" value="145" />
+          <entry key="cell" value="407" />
           <entry key="css" value="198" />
           <entry key="dummy" value="1" />
-          <entry key="html" value="3736" />
+          <entry key="html" value="3784" />
           <entry key="js" value="2035" />
-          <entry key="py" value="4748" />
+          <entry key="py" value="4876" />
           <entry key="sql" value="50" />
           <entry key="txt" value="16" />
           <entry key="urls" value="8" />
@@ -160,59 +1158,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/chat/views.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chat/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="820">
-              <caret line="499" column="63" lean-forward="true" selection-start-line="499" selection-start-column="63" selection-end-line="499" selection-end-column="63" />
+            <state relative-caret-position="367">
+              <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
               <folding>
-                <element signature="e#24#63#0" expanded="true" />
+                <element signature="e#0#24#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/QA.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="1924" selection-start-line="1924" selection-end-line="1924" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/TopPage.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="139" column="74" selection-start-line="139" selection-start-column="74" selection-end-line="139" selection-end-column="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Chat.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TF_Chat/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="41" column="47" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://282a841f-e31f-4f10-9eb3-9a7e875d9e2c/schema/tfchat/table/chat_log">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -227,15 +1180,76 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Signup.html">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="das://282a841f-e31f-4f10-9eb3-9a7e875d9e2c/schema/tfchat/table/chat_authuser">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chat/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+              <folding>
+                <element signature="e#24#63#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Test.html">
+        <entry file="file://$PROJECT_DIR$/chat/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-126">
-              <caret line="82" column="27" lean-forward="true" selection-start-line="77" selection-start-column="21" selection-end-line="82" selection-end-column="27" />
+            <state relative-caret-position="92">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Chat.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8010">
+              <caret line="534" column="29" selection-start-line="534" selection-start-column="29" selection-end-line="534" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://282a841f-e31f-4f10-9eb3-9a7e875d9e2c/schema/tfchat/table/chat_authuser_user_permissions">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://282a841f-e31f-4f10-9eb3-9a7e875d9e2c/schema/tfchat/table/auth_group_permissions">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://282a841f-e31f-4f10-9eb3-9a7e875d9e2c/schema/tfchat/table/auth_group">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://282a841f-e31f-4f10-9eb3-9a7e875d9e2c/schema/tfchat/table/chat_adminflag">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -246,16 +1260,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="Python Script" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>contrib</find>
-      <find>cache</find>
       <find>api</find>
       <find>app</find>
       <find>sidebar-wrapper</find>
@@ -266,7 +1278,6 @@
       <find>request.session</find>
       <find>iframe</find>
       <find>MakeReturn</find>
-      <find>IdPerUser</find>
       <find>fixed</find>
       <find>c</find>
       <find>z</find>
@@ -284,6 +1295,9 @@
       <find>QA.objects</find>
       <find>formset</find>
       <find>public</find>
+      <find>127</find>
+      <find>IdPerUser</find>
+      <find>paraIdPerUser</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -321,17 +1335,20 @@
         <option value="$PROJECT_DIR$/static/js/Key.js" />
         <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/chat/static/css/style.css" />
-        <option value="$PROJECT_DIR$/templates/Chat.html" />
-        <option value="$PROJECT_DIR$/TF_Chat/urls.py" />
         <option value="$PROJECT_DIR$/templates/Log.html" />
         <option value="$PROJECT_DIR$/manage.py" />
-        <option value="$PROJECT_DIR$/chat/forms.py" />
-        <option value="$PROJECT_DIR$/chat/models.py" />
         <option value="$PROJECT_DIR$/templates/Setting.html" />
-        <option value="$PROJECT_DIR$/templates/Test.html" />
         <option value="$PROJECT_DIR$/templates/QA.html" />
-        <option value="$PROJECT_DIR$/chat/views.py" />
+        <option value="$PROJECT_DIR$/templates/manual.html" />
+        <option value="$PROJECT_DIR$/TF_Chat/urls.py" />
+        <option value="$PROJECT_DIR$/templates/Test.html" />
+        <option value="$PROJECT_DIR$/templates/Chat.html" />
+        <option value="$PROJECT_DIR$/templates/Introduce.html" />
         <option value="$PROJECT_DIR$/templates/TopPage.html" />
+        <option value="$PROJECT_DIR$/chat/forms.py" />
+        <option value="282a841f-e31f-4f10-9eb3-9a7e875d9e2c/schema/tfchat/table/chat_qa.sql" />
+        <option value="$PROJECT_DIR$/chat/views.py" />
+        <option value="$PROJECT_DIR$/chat/models.py" />
       </list>
     </option>
   </component>
@@ -341,11 +1358,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1490" />
-    <option name="y" value="201" />
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1366" />
-    <option name="height" value="699" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -353,7 +1368,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -399,6 +1413,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -523,33 +1538,33 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1490" y="201" width="1366" height="699" extended-state="0" />
+    <frame x="0" y="0" width="1366" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17598188" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17371601" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32970297" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946752" weight="0.34950495" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946752" visible="true" weight="0.26217765" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32970297" />
-      <window_info anchor="bottom" id="Database Console" order="7" weight="0.3871287" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32808024" />
+      <window_info anchor="bottom" id="Database Console" order="7" weight="0.38538682" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.37326732" />
-      <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32970297" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49946752" visible="true" weight="0.29983526" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.37106016" />
+      <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32808024" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49946752" weight="0.53151864" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5005325" side_tool="true" weight="0.23366337" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32475248" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32378224" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32960597" />
       <window_info anchor="right" id="R Graphics" order="4" />
       <window_info anchor="right" id="R Packages" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.20845921" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.31570998" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20485175" />
@@ -589,22 +1604,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="とりあえず突っ込んだ" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chat/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/282a841f-e31f-4f10-9eb3-9a7e875d9e2c/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1909a258-ae81-463f-bce5-d0a42f620918/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/chat/static/assets/css/paper-dashboard.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -612,21 +1611,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat/static/admin/css/login.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/static/admin/css/forms.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/static/admin/css/login.css" />
+    <entry file="file://$PROJECT_DIR$/chat/static/admin/css/forms.css" />
     <entry file="file://$PROJECT_DIR$/templates/chat/base.html" />
     <entry file="file://$PROJECT_DIR$/templates/chat/memo_detail.html" />
-    <entry file="file://$PROJECT_DIR$/chat/static/admin/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/static/admin/css/base.css" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f2c4e555-56b5-408d-8bf6-3ddf20064251/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -653,45 +1642,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chat/static/js/logic.js" />
     <entry file="file://$PROJECT_DIR$/static/js/logic.js" />
-    <entry file="file://$PROJECT_DIR$/chat/static/js/Key.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="74" column="5" lean-forward="true" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/Key.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/static/js/Key.js" />
+    <entry file="file://$PROJECT_DIR$/static/css/style.css" />
+    <entry file="file://$PROJECT_DIR$/chat/static/css/style.css" />
+    <entry file="file://$PROJECT_DIR$/static/js/Key.js" />
     <entry file="file://$PROJECT_DIR$/templates/Login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="797">
           <caret line="221" selection-start-line="221" selection-end-line="221" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TF_Chat/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
@@ -754,6 +1712,124 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://282a841f-e31f-4f10-9eb3-9a7e875d9e2c/schema/tfchat/table/chat_authuser_groups">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Log.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="61" column="9" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://282a841f-e31f-4f10-9eb3-9a7e875d9e2c/schema/tfchat/table/chat_log">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/QA.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28860">
+          <caret line="1924" selection-start-line="1924" selection-end-line="1924" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Signup.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Introduce.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2280">
+          <caret line="152" column="27" selection-start-line="152" selection-start-column="27" selection-end-line="152" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/TopPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2085">
+          <caret line="139" column="112" selection-start-line="139" selection-start-column="112" selection-end-line="139" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Setting.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1635">
+          <caret line="109" column="27" selection-start-line="104" selection-start-column="21" selection-end-line="109" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/manual.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TF_Chat/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1725">
+          <caret line="115" column="77" selection-start-line="115" selection-start-column="77" selection-end-line="115" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TF_Chat/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="134" selection-start-line="134" selection-end-line="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://282a841f-e31f-4f10-9eb3-9a7e875d9e2c/schema/tfchat/table/chat_qa.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4365">
+          <caret line="341" column="26" selection-start-line="341" selection-start-column="26" selection-end-line="341" selection-end-column="26" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Chat.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8010">
+          <caret line="534" column="29" selection-start-line="534" selection-start-column="29" selection-end-line="534" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://282a841f-e31f-4f10-9eb3-9a7e875d9e2c/schema/tfchat/table/chat_authuser_user_permissions">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="das://282a841f-e31f-4f10-9eb3-9a7e875d9e2c/schema/tfchat/table/auth_group_permissions">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -768,28 +1844,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://282a841f-e31f-4f10-9eb3-9a7e875d9e2c/schema/tfchat/table/chat_authuser_user_permissions">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="121" column="13" lean-forward="true" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://282a841f-e31f-4f10-9eb3-9a7e875d9e2c/schema/tfchat/table/chat_authuser_groups">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://282a841f-e31f-4f10-9eb3-9a7e875d9e2c/schema/tfchat/table/chat_authuser">
+    <entry file="das://282a841f-e31f-4f10-9eb3-9a7e875d9e2c/schema/tfchat/table/chat_adminflag">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -798,74 +1853,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chat/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="9" column="54" lean-forward="true" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Log.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="61" column="9" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Setting.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="109" column="27" selection-start-line="104" selection-start-column="21" selection-end-line="109" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Signup.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Chat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
-          <caret line="82" column="27" lean-forward="true" selection-start-line="77" selection-start-column="21" selection-end-line="82" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/QA.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="1924" selection-start-line="1924" selection-end-line="1924" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://282a841f-e31f-4f10-9eb3-9a7e875d9e2c/schema/tfchat/table/chat_adminflag">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TF_Chat/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="41" column="47" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://282a841f-e31f-4f10-9eb3-9a7e875d9e2c/schema/tfchat/table/chat_log">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+        <state relative-caret-position="367">
+          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -876,17 +1868,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/TopPage.html">
+    <entry file="file://$PROJECT_DIR$/chat/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="139" column="74" selection-start-line="139" selection-start-column="74" selection-end-line="139" selection-end-column="74" />
+        <state relative-caret-position="92">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat/views.py">
+    <entry file="das://282a841f-e31f-4f10-9eb3-9a7e875d9e2c/schema/tfchat/table/chat_authuser">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="499" column="63" lean-forward="true" selection-start-line="499" selection-start-column="63" selection-end-line="499" selection-end-column="63" />
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
           </folding>

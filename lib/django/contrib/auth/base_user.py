@@ -128,6 +128,9 @@ class AbstractBaseUser(models.Model):
         raise NotImplementedError('subclasses of AbstractBaseUser must provide a get_full_name() method')
 
     def get_short_name(self):
+       # return getattr(self, self.USERNAME_FIELD)
+        # "Return the identifying username for this User"
+        #return getattr(self, self.USERNAME_FIELD)
         raise NotImplementedError('subclasses of AbstractBaseUser must provide a get_short_name() method.')
 
     def get_session_auth_hash(self):

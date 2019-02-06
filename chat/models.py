@@ -45,6 +45,7 @@ class AuthUserManager(BaseUserManager):
                                 password=password
                                 )
         user.is_superuser = True
+        user.is_staff = False
         user.LoginTimes = datetime.now()
         user.set_password(password)
         user.adminFlag = True
@@ -71,6 +72,7 @@ class AuthUser(AbstractBaseUser, PermissionsMixin):
     USERNAME_FIELD = 'username'
     author = models.CharField(max_length=200, blank=True, null=True)
     userpassword = models.CharField(max_length=200, blank=True, null=True)
+    is_staff = models.BooleanField(('staff status'), default=False)
     objects = AuthUserManager()
 
     def __str__(self):
@@ -84,7 +86,7 @@ class Log(models.Model):
     AnswerNo = models.BigIntegerField()
     Answer = models.CharField(max_length=200)
     Withdrawal = models.BooleanField(default=False)
-    ScreenId=models.CharField(max_length=100)
+    ScreenId=models.CharField(max_length=200)
 
 
 CHOICE = {

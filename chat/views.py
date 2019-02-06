@@ -28,6 +28,9 @@ from django.forms import models
 import django.http
 import chat.models
 import chat.forms
+import time
+
+
 import uuid
 # from django.contrib.auth.models import User
 
@@ -298,6 +301,13 @@ def setting(request):
 
     return render(request, 'Setting.html',{'key': key})
 
+def introduce(request):
+    return render(request, 'Introduce.html')
+
+
+def manual(request):
+    return render(request, 'manual.html')
+
 #作成中のユーザ管理画面
 def userlist(request):
     userPara=request.session['user']
@@ -329,6 +339,7 @@ def api(request):
         qas=[]
         for qa in QA.objects.filter(userKey=param_value).order_by('IdPerUser'):
             reply = qa.Answer
+            print '12345'+reply
             if qa.Q1 != '':
                 reply = reply + '\n[option]' + '1.' + qa.Q1
             if qa.Q2 != '':
@@ -376,6 +387,8 @@ def api(request):
 
 #画面と紐つかないAPI
 def apiFourfusion(request):
+    start = time.time()
+
     if "key" in request.GET:
         if "message" in request.GET:
             if "sid" in request.GET:
@@ -506,6 +519,9 @@ def apiFourfusion(request):
                                       )
                 insert_data.save()
                 #print(reply)
+                process_time = time.time() - start
+
+                print(process_time)
                 return response
             else:
                 data = {'error': 'error3'}

@@ -41,6 +41,9 @@ urlpatterns = [
     url(r'^apitest/', views.apitest,name='apitest'),
     url(r'^apiFourfusion/', views.apiFourfusion,name='apiFourfusion'),
     url(r'^$', views.login, name='login'),
+    url(r'^manual', views.manual, name='manual'),
+    url(r'^Introduce', views.introduce, name='Introduce'),
+
     #url(r'^login/', auth_views.LoginView.as_view(template_name='Login.html'), name='login'),
 
 ]

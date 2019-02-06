@@ -19,8 +19,8 @@
 
     <link href="https://fonts.google.com/?query=proxima+nova" rel="stylesheet">
     <!--<script type="text/javascript" src="/static/js/logic.js"></script>-->
-    <link rel="stylesheet" href="/static/css/style.css">
-    <script src="http://www.techforward.co.jp/tfchat/js/Key.js"></script>
+    <link rel="stylesheet" href="/static/assets/css/style.css">
+{#    <script src="https://www.techforward.co.jp/tfchat/js/Key.js"></script>#}
 
     <!--<script src="/static/js/Key.js"></script>-->
     <!--<script type="text/javascript" src="{% static 'js/Key.js' %}"></script>-->
@@ -57,7 +57,7 @@
     }
     // var requestURL = 'http://tfchat.work/api/?userKey='+userKey;    
     // 
-    var requestURL = 'http://127.0.0.1:8000/api/?userKey='+userKey;    
+    var requestURL = 'https://tfchat.work/api/?userKey='+userKey;
     
     
 
@@ -534,7 +534,7 @@ function MakeReturn(id) {
 
     <div class="chat-footer">
         <div class="chat-footer-contet">
-            <form action="http://127.0.0.1:8000/index/" method="post" target="iframe" name="f">
+            <form action="https://tfchat.work/index/" method="post" target="iframe" name="f">
                                 {% csrf_token %}
 
             <table>

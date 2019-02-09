@@ -19,8 +19,8 @@
 
     <link href="https://fonts.google.com/?query=proxima+nova" rel="stylesheet">
     <!--<script type="text/javascript" src="/static/js/logic.js"></script>-->
-    <link rel="stylesheet" href="/static/assets/css/style.css">
-{#    <script src="https://www.techforward.co.jp/tfchat/js/Key.js"></script>#}
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="http://www.techforward.co.jp/tfchat/js/Key.js"></script>
 
     <!--<script src="/static/js/Key.js"></script>-->
     <!--<script type="text/javascript" src="{% static 'js/Key.js' %}"></script>-->
@@ -57,12 +57,12 @@
     }
     // var requestURL = 'http://tfchat.work/api/?userKey='+userKey;    
     // 
-    var requestURL = 'https://tfchat.work/api/?userKey='+userKey;
+    var requestURL = 'http://127.0.0.1:8000/api/?userKey='+userKey;    
     
     
 
     var now = new Date();
-    var NextAnswerId = 0;
+    var NextAnswerId = -1;
     window.sessionStorage.setItem(['useKey'],[userKey]);
     var a = window.sessionStorage.getItem(['useKey']);
     var request = new XMLHttpRequest();
@@ -334,7 +334,7 @@ function Execute() {
               if(jsonGet[NextAnswerId].Q1=='')
               {
                 //ReturnがなにもなければNextAnswerIdを0にする（ストーリーの処理ではない）
-                NextAnswerId=0;
+                NextAnswerId = -1;
     //            console.log('yesuuuuuuuuuu')
       //          console.log('NextAnswerId:'+NextAnswerId)
               }
@@ -369,10 +369,10 @@ function Delete() {
 function MakeReturn(id) {
     var Para = document.getElementById("message").value;
     var Returnid = 0;
-    //console.log('NextAnswerId:' + NextAnswerId+'Para:'+Para)
+    // console.log('NextAnswerId:' + NextAnswerId+'Para:'+Para)
 
-    if (NextAnswerId != 0) {
-      //  console.log('対話')
+    if (NextAnswerId != -1) {
+       // console.log('対話')
       //  console.log('jsonGet[NextAnswerId][\'question\']:' + jsonGet[NextAnswerId]['question']['Q1'])
         if (jsonGet[NextAnswerId].Q1 != '') {
             if (Para.match(jsonGet[NextAnswerId].Q1)) {
@@ -389,7 +389,7 @@ function MakeReturn(id) {
         }
         if (jsonGet[NextAnswerId].Q2 != '') {
             if (Para.match(jsonGet[NextAnswerId].Q2)) {
-            //    console.log('A2')
+               // console.log('A2')
                 insertDataLeft('こちらでいかがでしょうか',);
                 var NextNo=jsonGet[NextAnswerId].A2;
                 response = jsonGet[NextNo].Answer;
@@ -444,7 +444,7 @@ function MakeReturn(id) {
 
     }
     else {
-        //console.log('単発')
+        // console.log('単発')
         //console.log('jsonGet[id]:'+jsonGet[0].Answer)
         if (jsonGet[id].Keyword != '') {
             if (Para.match(jsonGet[id].Keyword)) {
@@ -534,7 +534,7 @@ function MakeReturn(id) {
 
     <div class="chat-footer">
         <div class="chat-footer-contet">
-            <form action="https://tfchat.work/index/" method="post" target="iframe" name="f">
+            <form action="http://127.0.0.1:8000/index/" method="post" target="iframe" name="f">
                                 {% csrf_token %}
 
             <table>

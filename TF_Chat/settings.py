@@ -192,3 +192,7 @@ REST_FRAMEWORK = {
 }
 
 AUTH_USER_MODEL = 'chat.AuthUser'
+
+import sys
+reload(sys)
+sys.setdefaultencoding('UTF8')

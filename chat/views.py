@@ -621,7 +621,8 @@ import csv
 from io import TextIOWrapper, StringIO
 def qa_import(request):
     userPara=request.session['user']
-    if 'csv' in request.FILES:
+    if request.method == 'POST':
+        print 'csv'
         form_data = TextIOWrapper(request.FILES['csv'].file, encoding='utf-8')
         csv_file = csv.reader(form_data)
         for line in csv_file:

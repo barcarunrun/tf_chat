@@ -240,9 +240,9 @@ def qa(request):
 
     if request.POST['form-'+str(insertNum)+'-id']=='':
 
-        insert_data = QA(Keyword =request.POST['form-'+str(insertNum)+'-Keyword'],
-                         Answer =request.POST['form-'+str(insertNum)+'-Answer'],
-                         URL=request.POST['form-'+str(insertNum)+'-URL'],
+        insert_data = QA(Keyword =validate_str(request.POST['form-'+str(insertNum)+'-Keyword']),
+                         Answer =validate_str(request.POST['form-'+str(insertNum)+'-Answer']),
+                         URL=validate_str(request.POST['form-'+str(insertNum)+'-URL']),
                          userId=userPara,
                          is_public=bool(strtobool(request.POST['form-'+str(insertNum) + '-is_public'])),
                          Q1 =request.POST['form-'+str(insertNum)+'-Q1'],
@@ -265,8 +265,8 @@ def qa(request):
         print(bool(strtobool(request.POST['form-'+str(insertNum) + '-is_public'])))
         serachObj = QA.objects.get(id=str(serachNum))
         serachObj.Keyword = validate_str(request.POST['form-'+str(insertNum)+'-Keyword'])
-        serachObj.Answer = validate_str(request.POST['form-' + str(insertNum) + '-Answer'])
-        serachObj.URL = validate_str(request.POST['form-' + str(insertNum) + '-URL'])
+        serachObj.Answer = validate_str(request.POST['form-'+str(insertNum)+'-Answer'])
+        serachObj.URL = validate_str(request.POST['form-'+str(insertNum)+'-URL'])
         # serachObj.Keyword = request.POST['form-'+str(insertNum)+'-Keyword']
         # serachObj.Answer = request.POST['form-' + str(insertNum) + '-Answer']
         # serachObj.URL = request.POST['form-' + str(insertNum) + '-URL']

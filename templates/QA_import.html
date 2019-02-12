@@ -1662,13 +1662,13 @@
                             <p>Top Page</p>
                         </a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="/qa">
                             <i class="ti-comments"></i>
                             <p>QA</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="/qa_import">
                             <i class="ti-comments"></i>
                             <p>CSVで一括登録</p>
@@ -1732,213 +1732,45 @@
                     <div class="col-md-12">
                         <form action="" method="post">
                             {% csrf_token %}
-                            <div class="btn btn-default">
-                                <button value="1" name="all_public" type="submit" style="background:none;border:0;">一括公開</button>
-                            </div>
-                            <div class="btn btn-default">
-                                <button value="0" name="all_test" type="submit" style="background:none;border:0;">一括テスト</button>
+                            <div  style="display: flex;">
+                                <input type="file" class="dropify" data-default-file="ファイルを選択してください" name="csv">
+                                <button class="btn btn-default" type="submit" class="btn" name="button">アップロード</button>
                             </div>
                         </form>
-                        <h5 style="color: red">No.0には該当がない際の返答を入力してください。</h5>
+                        <style>
+                        table, th, td {
+                            border-collapse: collapse;
+                            border: 1px solid #ccc;
+                            line-height: 1.5;
+                            }
 
-                            <style type="text/css">
-                                .is_public label {
-                                    font-size: 14px;
-                                }
-
-                                .is_public ul {
-                                    display: flex;
-                                    margin: 0;
-                                    padding: 0;
-                                }
-
-                                .is_public ul li {
-                                    display: inline;
-                                }
-
-                                .is_public label {
-                                    background-color: #fff
-                                }
-                            </style>
-                            {% for form in formset %}
-                                <form action="" method="post">
-                        {% csrf_token %}
-
-                            {{ form.id}}
-                            <div class="card" id="{{ forloop.counter }}">
-                                <table class="table table-striped" 　style="table-layout:fixed;">
-
-                                    <thead>
-                                        <th style="width:5%;text-align: right;">
-                                            No.{{ forloop.counter|add:-1 }}
-
-                                        </th>
-
-
-                                        <th style="width:5%">
-
-                                        </th>
-                                        <th colspan="4" style="width:90%;text-align: right">
-                                            <div class="btn btn-default">
-                                                <button name="buttom" value="{{ forloop.counter|add:-1 }}" type="submit"
-                                                    style="background:none;border:0;">更新</button>
-                                            </div>
-                                        </th>
-                                    </thead>
-                                    <tbody>
-                                        {% if forloop.counter == 1 %}
-                                        <input type="hidden" value="" name="form-0-Keyword">
-                                        {% else %}
-                                        <tr>
-                                            <td></td>
-                                            <td style="text-align: right;">
-                                                <h5>Keyword</h5>
-                                            </td>
-                                            <td colspan="4" style="padding-left:2%;padding-right:2%;">
-                                                {{ form.Keyword|add_class:"Keyword"}}
-                                            </td>
-
-                                        </tr>
-                                        {% endif %}
-                                        <!-- <tr>
-                                            <td></td>
-                                            <td style="text-align: right;">
-                                                <h5>IdPerUser</h5>
-                                            </td>
-                                            <td colspan="4" style="padding-left:2%;padding-right:2%;">
-                                                {{ form.IdPerUser|add_class:"IdPerUser"}}
-                                            </td>
-
-                                        </tr> -->
-                                        <tr>
-                                            <td></td>
-                                            <td style="text-align: right;">
-                                                <h5>Answer</h5>
-                                            </td>
-                                            <td colspan="4" style="padding-left:2%;padding-right:2%;">
-                                                {{ form.Answer|add_class:"Answer"}}
-                                            </td>
-
-                                        </tr>
-
-                                        <tr>
-                                            <td></td>
-                                            <td style="text-align: right;">
-                                                <h5>URL</h5>
-                                            </td>
-                                            <td colspan="4" style="padding-left:2%;padding-right:2%;">
-
-                                                {{ form.URL|add_class:"Answer" }}
-                                                <button id="btn{{ forloop.counter|add:-1 }}" type="button" style="background:none;border:0;padding-left: 4%;">
-                                                    <i class="ti-angle-down"></i>
-                                                </button>
-                                            </td>
-                                            </td>
-                                        </tr>
-
-                                        <tr class="test{{ forloop.counter |add:-1}}">
-                                            <td></td>
-                                            <td></td>
-                                            <td style="text-align: left;width:10%;">
-                                                <h7>ReplyNo.</h7>
-                                            </td>
-                                            <td style="text-align: left;width:20%;">
-                                                <h7>ReplyKeyWord</h7>
-                                            </td>
-                                            <td style="text-align: left;width:20%;">
-                                                <h7>Next AnswerNo.</h7>
-                                            </td>
-                                            <td style="text-align: left;width:50%;"></td>
-
-                                        </tr>
-
-                                        <tr class="test{{ forloop.counter |add:-1}}">
-                                            <td></td>
-                                            <td></td>
-                                            <td style="text-align: center;width:10%;">
-                                                <h7>{{ forloop.counter|add:-1 }}-1</h7>
-                                            </td>
-                                            <td style="text-align: left;width:20%;">
-                                                {{ form.Q1|add_class:"NextQA" }}
-                                            </td>
-                                            <td style="text-align: left;width:20%;">
-                                                {{ form.A1|add_class:"NextQA" }}
-                                            </td>
-                                            <td style="text-align: left;width:50%;"></td>
-                                        </tr>
-                                        <tr class="test{{ forloop.counter |add:-1}}">
-                                            <td></td>
-                                            <td></td>
-                                            <td style="text-align: center;width:10%;">
-                                                <h7>{{ forloop.counter |add:-1}}-2</h7>
-                                            </td>
-                                            <td style="text-align: left;width:20%;">
-                                                {{ form.Q2|add_class:"NextQA" }}
-                                            </td>
-                                            <td style="text-align: left;width:20%;">
-                                                {{ form.A2|add_class:"NextQA" }}
-                                            </td>
-                                            <td style="text-align: left;width:50%;"></td>
-                                        </tr>
-                                        <tr class="test{{ forloop.counter|add:-1 }}">
-                                            <td></td>
-                                            <td></td>
-                                            <td style="text-align: center;width:10%;">
-                                                <h7>{{ forloop.counter|add:-1 }}-3</h7>
-                                            </td>
-                                            <td style="text-align: left;width:20%;">
-                                                {{ form.Q3|add_class:"NextQA" }}
-                                            </td>
-                                            <td style="text-align: left;width:20%;">
-                                                {{ form.A3|add_class:"NextQA" }}
-                                            </td>
-                                            <td style="text-align: left;width:50%;"></td>
-                                        </tr>
-                                        <tr class="test{{ forloop.counter|add:-1 }}">
-                                            <td></td>
-                                            <td></td>
-                                            <td style="text-align: center;width:10%;">
-                                                <h7>{{ forloop.counter |add:-1}}-4</h7>
-                                            </td>
-                                            <td style="text-align: left;width:20%;">
-                                                {{ form.Q4|add_class:"NextQA" }}
-                                            </td>
-                                            <td style="text-align: left;width:20%;">
-                                                {{ form.A4|add_class:"NextQA" }}
-                                            </td>
-                                            <td style="text-align: left;width:50%;"></td>
-                                        </tr>
-                                        <tr class="test{{ forloop.counter|add:-1 }}">
-                                            <td></td>
-                                            <td></td>
-                                            <td style="text-align: center;width:10%;">
-                                                <h7>{{ forloop.counter |add:-1}}-5</h7>
-                                            </td>
-                                            <td style="text-align: left;width:20%;">
-                                                {{ form.Q5|add_class:"NextQA" }}
-                                            </td>
-                                            <td style="text-align: left;width:20%;">
-                                                {{ form.A5|add_class:"NextQA" }}
-                                            </td>
-                                            <td style="text-align: left;width:50%;" 　></td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td style="text-align: right;">
-                                                <h5>Status</h5>
-                                            </td>
-                                            <td colspan="4" style="padding-left:2%;padding-right:2%;">
-                                                <div class="is_public">
-                                                    {{ form.is_public }}
-                                                </div>
-                                            </td>
-
-                                        </tr>
-                                </table>
-                            </div>
-                                </form>
-                            {% endfor %}
-
+                            table.type06 th {
+                            width: 150px;
+                            padding: 10px;
+                            font-weight: bold;
+                            vertical-align: top;
+                            background: #3f3f3f;
+                            color: #ffffff;
+                            }
+                            table.type06 td {
+                            width: 350px;
+                            padding: 10px;
+                            vertical-align: top;
+                            }
+                        </style>
+                        <br>
+                        <table class="type06" border=1>
+                            <tr><td>番号</td><td>Keyword</td><td>Answer</td><td>URL</td><td>Status(1:公開 0:非公開)</td></tr>
+                        </table>
+                        <br>
+                        <div class="csv_fomat">
+                            csvの例になります。
+                            <table class="type06" border=1>
+                                <tr><td>0</td><td></td><td>わかりませんでした。こちらからお問い合わせください。</td><td>https://goo.gl/forms/8VFFen4L2dk4XAl83</td><td>1</td></tr>
+                                <tr><td>1</td><td>値段</td><td>値段は月額24,800円からになります。</td><td>https://goo.gl/forms/8VFFen4L2dk4XAl83</td><td>1</td></tr>
+                                <tr><td>2</td><td>値段</td><td>値段は月額24,800円からになります。</td><td>https://goo.gl/forms/8VFFen4L2dk4XAl83</td><td>1</td></tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

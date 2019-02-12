@@ -234,6 +234,10 @@ def qa(request):
    # print ('serachObj:' + str(serachObj.values()))
     #print ('serachObj.count():'+str(serachObj.count()))
 
+    def validate_str(str):
+        result = str if str != "" else " "
+        return result
+
     if request.POST['form-'+str(insertNum)+'-id']=='':
 
         insert_data = QA(Keyword =request.POST['form-'+str(insertNum)+'-Keyword'],
@@ -260,9 +264,12 @@ def qa(request):
         print(request.POST['form-'+str(insertNum) + '-is_public'])
         print(bool(strtobool(request.POST['form-'+str(insertNum) + '-is_public'])))
         serachObj = QA.objects.get(id=str(serachNum))
-        serachObj.Keyword = request.POST['form-'+str(insertNum)+'-Keyword']
-        serachObj.Answer = request.POST['form-' + str(insertNum) + '-Answer']
-        serachObj.URL = request.POST['form-' + str(insertNum) + '-URL']
+        serachObj.Keyword = validate_str(request.POST['form-'+str(insertNum)+'-Keyword'])
+        serachObj.Answer = validate_str(request.POST['form-' + str(insertNum) + '-Answer'])
+        serachObj.URL = validate_str(request.POST['form-' + str(insertNum) + '-URL'])
+        # serachObj.Keyword = request.POST['form-'+str(insertNum)+'-Keyword']
+        # serachObj.Answer = request.POST['form-' + str(insertNum) + '-Answer']
+        # serachObj.URL = request.POST['form-' + str(insertNum) + '-URL']
         if bool(strtobool(request.POST['form-' + str(insertNum) + '-is_public'])):
             serachObj.is_public = True
         else:
@@ -608,3 +615,27 @@ def apitest(request):
         json_str = json.dumps(data, ensure_ascii=False, indent=2)
         response = HttpResponse(json_str, content_type='application/javascript; charset=UTF-8', status=None)
         return response
+
+# CSVインポート画面
+import csv
+from io import TextIOWrapper, StringIO
+def qa_import(request):
+    userPara=request.session['user']
+    if 'csv' in request.FILES:
+        form_data = TextIOWrapper(request.FILES['csv'].file, encoding='utf-8')
+        csv_file = csv.reader(form_data)
+        for line in csv_file:
+            no = line[0]
+            keyword = line[1]
+            answer = line[2]
+            url = line[3]
+            status = True if line[4] == "1" else False
+            qa = QA.objects.get(userId=userPara,IdPerUser=no)
+            # qa.IdPerUser = no
+            if no != 0: qa.Keyword = keyword
+            qa.Answer = answer
+            qa.URL = url
+            qa.is_public = status
+            qa.save()
+
+    return render(request,'QA_import.html')

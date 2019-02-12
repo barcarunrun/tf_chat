@@ -36,6 +36,7 @@ urlpatterns = [
     url(r'^userlist/', views.userlist, name='userlist'),
     url(r'^top/', views.topPage, name='top'),
     url(r'^qa/', views.qa, name='qa'),
+    url(r'^qa_import/', views.qa_import, name='qa_import'),
     url(r'^test/', views.test, name='test'),
     url(r'^api/', views.api,name='api'),
     url(r'^apitest/', views.apitest,name='apitest'),

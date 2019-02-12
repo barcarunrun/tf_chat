@@ -97,9 +97,9 @@ CHOICE = {
 
 class QA(models.Model):
     is_public = models.BooleanField(choices=CHOICE, default=False)
-    Keyword = models.CharField(max_length=100, blank=True, null=True)
-    Answer = models.CharField(max_length=200)
-    URL = models.URLField(max_length=300)
+    Keyword = models.CharField(max_length=100, default=" ")
+    Answer = models.CharField(max_length=200, default=" ")
+    URL = models.URLField(max_length=300, default=" ")
     #NextAnswerNo = models.BigIntegerField()
     #Question = models.CharField(max_length=200)
     userId = models.CharField(verbose_name='ユーザID',

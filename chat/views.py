@@ -54,7 +54,7 @@ logging.getLogger().setLevel(logging.DEBUG)
 
 
 
-from django.utils.six import six
+from django.utils import six
 from django.contrib.admin.views.decorators import staff_member_required
 
 # Create your views here.

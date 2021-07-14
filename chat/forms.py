@@ -38,7 +38,7 @@ class ItemForm(forms.ModelForm):
 
 def create(user):
     num = 100 - QA.objects.filter(userId=user).count()
-    print num
+    print (num)
     ItemFormSet2 = formsets.formset_factory(ItemForm, extra=num, formset=models.BaseModelFormSet)(
         queryset=QA.objects.filter(userId=user))
     ItemFormSet2.model = QA
